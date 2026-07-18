@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Coding 工具能力赋能：Claude / Qoder / Codex / Cursor / Trae / 华为云码道</title>
+  <title>AI Coding 工具能力赋能：华为云码道 / Claude / Qoder / Codex / Cursor / Trae</title>
   <style>
     :root {
       --bg: #f7f4f4;
@@ -885,17 +885,17 @@
     <div class="topbar">
       <div>
         <h1>AI Coding 工具能力赋能</h1>
-        <p class="subtitle">Claude Code / Qoder / OpenAI Codex / Cursor / Trae / 华为云码道（CodeArts）：能力框架、产品差异、套餐选型；官网资料复核日期：2026-07-18</p>
+        <p class="subtitle">华为云码道（CodeArts） / Claude Code / Qoder / OpenAI Codex / Cursor / Trae：能力框架、产品差异、套餐选型；官网资料复核日期：2026-07-18</p>
       </div>
       <div class="controls">
         <input id="search" class="search" type="search" placeholder="搜索主题、工具或关键词" />
         <button class="filter active" data-filter="all">全部</button>
+        <button class="filter" data-filter="codearts">码道</button>
         <button class="filter" data-filter="claude">Claude</button>
         <button class="filter" data-filter="qoder">Qoder</button>
         <button class="filter" data-filter="codex">Codex</button>
         <button class="filter" data-filter="cursor">Cursor</button>
         <button class="filter" data-filter="trae">Trae</button>
-        <button class="filter" data-filter="codearts">码道</button>
       </div>
     </div>
   </header>
@@ -904,10 +904,10 @@
     <aside>
       <h2>主题导航</h2>
       <ol class="toc">
+        <li><a href="#codearts-analysis"><span>华</span><span>华为云码道专项分析</span></a></li>
         <li><a href="#capability-taxonomy"><span>§</span><span>能力分类总览</span></a></li>
         <li><a href="#product-coverage"><span>Σ</span><span>产品能力覆盖矩阵</span></a></li>
         <li><a href="#plan-pricing"><span>$</span><span>套餐价格与额度</span></a></li>
-        <li><a href="#codearts-analysis"><span>华</span><span>华为云码道专项分析</span></a></li>
         <li class="toc-category">上下文与知识资产</li>
         <li><a href="#t1"><span>1</span><span>知识图谱</span></a></li>
         <li><a href="#t2"><span>2</span><span>AGENTS.md / 规则文件</span></a></li>
@@ -982,11 +982,11 @@
             <table class="matrix">
               <thead><tr><th>能力层</th><th>团队要掌握什么</th><th>典型工具实践</th></tr></thead>
               <tbody>
-                <tr><td>上下文</td><td>让 Agent 读懂仓库、规则、文档、历史经验和业务约束。</td><td>Qoder Knowledge Engine、Cursor/Trae Codebase Index、Codex AGENTS.md、Claude Memory、码道 Codebase</td></tr>
-                <tr><td>执行</td><td>把需求拆成计划、任务、文件修改、命令执行、验证和回滚。</td><td>Claude Workflow/Goal、Qoder Quest、Codex CLI/Cloud、Cursor Agent、Trae SOLO、码道智能体</td></tr>
-                <tr><td>协作</td><td>用 Sub Agent、Worktree、Cloud Agent、Channels 支撑并行研发和异步交付。</td><td>Claude Agent Teams、Qoder Managed Agents、Codex Subagents、Cursor Cloud Agents、Trae Subagents、码道 AgentTeam</td></tr>
-                <tr><td>治理</td><td>控制权限、凭证、模型、用量、审计、安全审查和企业配置。</td><td>Codex Security、Cursor Bugbot/Teams、Qoder Enterprise、Claude Team、Trae Privacy Mode、码道专业版</td></tr>
-              </tbody>
+                <tr><td>上下文</td><td>让 Agent 读懂仓库、规则、文档、历史经验和业务约束。</td><td>码道 Codebase、Qoder Knowledge Engine、Cursor/Trae Codebase Index、Codex AGENTS.md、Claude Memory</td></tr>
+                <tr><td>执行</td><td>把需求拆成计划、任务、文件修改、命令执行、验证和回滚。</td><td>码道智能体、Claude Workflow/Goal、Qoder Quest、Codex CLI/Cloud、Cursor Agent、Trae SOLO</td></tr>
+                <tr><td>协作</td><td>用 Sub Agent、Worktree、Cloud Agent、Channels 支撑并行研发和异步交付。</td><td>码道 AgentTeam、Claude Agent Teams、Qoder Managed Agents、Codex Subagents、Cursor Cloud Agents、Trae Subagents</td></tr>
+                <tr><td>治理</td><td>控制权限、凭证、模型、用量、审计、安全审查和企业配置。</td><td>码道专业版、Codex Security、Cursor Bugbot/Teams、Qoder Enterprise、Claude Team、Trae Privacy Mode</td></tr>
+                </tbody>
             </table>
           </div>
         </div>
@@ -996,17 +996,37 @@
             <table class="matrix positioning-matrix">
               <thead><tr><th>工具</th><th>最突出的能力</th><th>团队适用场景</th></tr></thead>
               <tbody>
+                <tr class="codearts-position"><td>华为云码道（CodeArts）</td><td>AI IDE、Code Agent、AgentTeam、Codebase、Skills、MCP、Hooks、Slash Commands、Checkpoint、Sandbox、企业专业版治理</td><td>国产云生态与企业治理场景、鸿蒙/ArkTS 开发、规范驱动开发、多智能体协作和统一配额管理</td></tr>
                 <tr><td>Claude Code</td><td>Subagents、Agent Teams、Hooks、Artifacts、Goal、Worktrees、Code Review</td><td>复杂代码任务拆解、多代理并行、自动化工作流</td></tr>
                 <tr><td>Qoder</td><td>Knowledge Engine、QMind、Quest、Repo Wiki、Knowledge Cards、Cloud Agents、Forward Channels</td><td>知识沉淀、企业级治理、异步云端代理</td></tr>
                 <tr><td>Codex</td><td>CLI、Cloud、Subagents、AGENTS.md、Worktree、Review、Computer Use、Codex Security</td><td>工程自动化、代码审查、安全扫描、终端/IDE/云协同</td></tr>
                 <tr><td>Cursor</td><td>Agent、Cloud Agents、Bugbot、Agent Review、Canvas、Rules、Semantic Index、Design Mode</td><td>IDE 内高频开发、PR 审查、代码库理解、前端视觉修改</td></tr>
                 <tr><td>Trae</td><td>SOLO mode、Built-in Agent、Subagents、Hooks、Memories、Figma to Code、Codebase Indexing</td><td>从需求到预览的自主开发、设计稿转代码、轻量团队规则</td></tr>
-                <tr class="codearts-position"><td>华为云码道（CodeArts）</td><td>AI IDE、Code Agent、AgentTeam、Codebase、Skills、MCP、Hooks、Slash Commands、Checkpoint、Sandbox、企业专业版治理</td><td>国产云生态与企业治理场景、鸿蒙/ArkTS 开发、规范驱动开发、多智能体协作和统一配额管理</td></tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
+
+
+      <section class="panel" id="codearts-analysis">
+        <h2 class="section-title">华为云码道（CodeArts）专项分析</h2>
+        <p class="lead">截至 2026-07-17，华为云码道已经不是单纯的补全工具，而是“AI IDE + Code Agent + Codebase + 企业治理”的组合。官方文档显示，它支持项目级代码生成、代码续写、研发知识问答、单元测试、Codebase 索引、Skills、Hooks、Slash Commands、记忆、Checkpoint、多会话、MCP、沙箱和 AgentTeam。</p>
+        <div class="table-scroll">
+          <table class="matrix">
+            <thead><tr><th>分析维度</th><th>码道能力判断</th><th>团队赋能价值</th><th>官网依据</th></tr></thead>
+            <tbody>
+              <tr><td>产品定位</td><td>深度融合 IDE、自主开发模式与代码大模型，覆盖项目级生成、续写、研发知识问答和单测生成。</td><td>适合作为国产 AI Coding 工具进入选型池，尤其适合华为云、鸿蒙、政企合规和中文研发组织场景。</td><td><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0001.html">产品介绍</a></td></tr>
+              <tr><td>工程执行</td><td>智能体可做需求理解、任务规划、跨文件修改、工具调用和人工确认；规范开发模式按需求规格、方案、任务、执行推进。</td><td>可对标 Goal / Workflow / Quest / Solo，培训时可用“规范驱动开发”讲清从需求到代码的闭环。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0005.html">智能体对话</a></td></tr>
+              <tr><td>知识与上下文</td><td>Codebase 支持本地个人索引和云端共享索引；文档也提到关键词、语义、图谱等代码库理解方式。</td><td>适合做存量系统接手、新人上手、复杂项目问答和团队知识沉淀。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0001.html">代码库索引</a></td></tr>
+              <tr><td>扩展机制</td><td>MCP 连接外部工具，Skills 封装任务流程，Hooks 在生命周期节点执行确定性脚本，Slash Commands 固化常用操作。</td><td>这组能力说明码道可承载企业内部工具链接入，而不是只靠聊天提示词。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0010.html">MCP</a>、<a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0024.html">Skills</a>、<a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0036.html">Hooks</a>、<a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0038.html">Slash Commands</a></td></tr>
+              <tr><td>多智能体协作</td><td>内置 AgentTeam，采用 Leader 编排和 Teammate 执行，并支持上下文隔离、领域专家子智能体和权限隔离。</td><td>可对标 Sub Agent / Agent Team，适合把安全审查、代码探索、需求生成、设计生成拆成不同子任务。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0052.html">内置智能体</a></td></tr>
+              <tr><td>治理与安全</td><td>沙箱限制文件、网络和高危命令；专业版包含操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单等能力。</td><td>对政企和金融医疗等合规行业，码道的采购价值不只在补全，而在权限边界、审计和国产云生态协同。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0045.html">沙箱</a>、<a href="https://codearts.huaweicloud.com/pricing.html">选型与定价</a></td></tr>
+              <tr><td>短板与待确认</td><td>本轮官网证据中，Figma 原生设计稿转代码、Repo Wiki/知识卡片同名能力、Worktree、渠道集成、远程 Cloud Agent 异步执行仍不如部分竞品明确。</td><td>选型时应把码道定位为“企业治理 + 国产生态 + IDE 智能体”强项，不要直接等同所有海外工具的云端协作形态。</td><td><a href="https://codearts.huaweicloud.com/">码道官网</a>、<a href="https://codearts.huaweicloud.com/pricing.html">价格方案</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <section class="panel" id="capability-taxonomy">
         <h2 class="section-title">能力分类总览</h2>
@@ -1048,68 +1068,68 @@
       <section class="panel" id="product-coverage">
         <h2 class="section-title">产品能力覆盖矩阵</h2>
         <p class="lead">这个表回答“哪些能力哪些产品有”，并按能力分类分组排序。矩阵采用证据等级：明确表示官网有同名或直接功能；相近表示名称不同但能支撑同类实践；未见表示本轮官网证据不足，不建议在采购或培训中作为该产品卖点。</p>
-        <p class="note">覆盖结论：Claude 强在多代理、工作流、规则、审查和治理；Qoder 强在知识资产、Quest、Cloud Agent、企业治理和可视化任务；Codex 强在 CLI/Cloud、审查、安全、权限沙箱和自动化接入；Cursor 强在 IDE Agent、代码索引、Cloud Agent、Review、Canvas 和补全；Trae 强在 SOLO、Figma、Inline、浏览器预览、记忆、Hooks 和轻量开发闭环；华为云码道强在 AI IDE、Codebase、规范驱动开发、MCP/Skills/Hooks、AgentTeam、沙箱与企业级管理。</p>
+        <p class="note">覆盖结论：华为云码道强在 AI IDE、Codebase、规范驱动开发、MCP/Skills/Hooks、AgentTeam、沙箱与企业级管理；Claude 强在多代理、工作流、规则、审查和治理；Qoder 强在知识资产、Quest、Cloud Agent、企业治理和可视化任务；Codex 强在 CLI/Cloud、审查、安全、权限沙箱和自动化接入；Cursor 强在 IDE Agent、代码索引、Cloud Agent、Review、Canvas 和补全；Trae 强在 SOLO、Figma、Inline、浏览器预览、记忆、Hooks 和轻量开发闭环。</p>
         <div class="coverage-legend"><span class="coverage-status yes">明确</span><span>官网同名或直接能力</span><span class="coverage-status near">相近</span><span>可支撑同类实践</span><span class="coverage-status gap">未见</span><span>未发现明确官网证据</span></div>
         <div class="coverage-wrap">
           <table class="matrix coverage-matrix">
-            <thead><tr><th>编号</th><th>能力</th><th>分类</th><th>Claude</th><th>Qoder</th><th>Codex</th><th>Cursor</th><th>Trae</th><th>华为云码道</th></tr></thead>
+            <thead><tr><th>编号</th><th>能力</th><th>分类</th><th>华为云码道</th><th>Claude</th><th>Qoder</th><th>Codex</th><th>Cursor</th><th>Trae</th></tr></thead>
             <tbody>
               <tr class="matrix-group"><td colspan="9">上下文与知识资产</td></tr>
-              <tr><td>1</td><td><a href="#t1">知识图谱</a></td><td>上下文与知识资产</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>2</td><td><a href="#t2">AGENTS.md / 规则文件</a></td><td>上下文与知识资产</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>3</td><td><a href="#t3">记忆</a></td><td>上下文与知识资产</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>4</td><td><a href="#t4">Repo Wiki</a></td><td>上下文与知识资产</td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>5</td><td><a href="#t5">知识卡片</a></td><td>上下文与知识资产</td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>6</td><td><a href="#t6">代码库索引</a></td><td>上下文与知识资产</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>7</td><td><a href="#t7">LSP</a></td><td>上下文与知识资产</td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>8</td><td><a href="#t8">上下文管理与压缩</a></td><td>上下文与知识资产</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>1</td><td><a href="#t1">知识图谱</a></td><td>上下文与知识资产</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>2</td><td><a href="#t2">AGENTS.md / 规则文件</a></td><td>上下文与知识资产</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>3</td><td><a href="#t3">记忆</a></td><td>上下文与知识资产</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>4</td><td><a href="#t4">Repo Wiki</a></td><td>上下文与知识资产</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>5</td><td><a href="#t5">知识卡片</a></td><td>上下文与知识资产</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status gap">未见</span></td></tr>
+              <tr><td>6</td><td><a href="#t6">代码库索引</a></td><td>上下文与知识资产</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>7</td><td><a href="#t7">LSP</a></td><td>上下文与知识资产</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>8</td><td><a href="#t8">上下文管理与压缩</a></td><td>上下文与知识资产</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
               <tr class="matrix-group"><td colspan="9">任务编排与执行</td></tr>
-              <tr><td>9</td><td><a href="#t9">Workflow</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>10</td><td><a href="#t10">CLI 与编程使用</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>11</td><td><a href="#t11">Goal</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>12</td><td><a href="#t12">Quest</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>13</td><td><a href="#t13">Cloud Agent</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>14</td><td><a href="#t14">Solo 模式</a></td><td>任务编排与执行</td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>15</td><td><a href="#t15">MCP 与工具协议</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>16</td><td><a href="#t16">Slash Commands</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>17</td><td><a href="#t17">远程开发环境</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td></tr>
-              <tr><td>18</td><td><a href="#t18">自动化、计划任务</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>19</td><td><a href="#t19">Spec-driven / PRD 驱动</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>20</td><td><a href="#t20">CI/CD 与非交互运行</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>21</td><td><a href="#t21">SDK、Headless 与 IDE 集成</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>9</td><td><a href="#t9">Workflow</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>10</td><td><a href="#t10">CLI 与编程使用</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>11</td><td><a href="#t11">Goal</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>12</td><td><a href="#t12">Quest</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>13</td><td><a href="#t13">Cloud Agent</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td></tr>
+              <tr><td>14</td><td><a href="#t14">Solo 模式</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>15</td><td><a href="#t15">MCP 与工具协议</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>16</td><td><a href="#t16">Slash Commands</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>17</td><td><a href="#t17">远程开发环境</a></td><td>任务编排与执行</td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>18</td><td><a href="#t18">自动化、计划任务</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>19</td><td><a href="#t19">Spec-driven / PRD 驱动</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>20</td><td><a href="#t20">CI/CD 与非交互运行</a></td><td>任务编排与执行</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>21</td><td><a href="#t21">SDK、Headless 与 IDE 集成</a></td><td>任务编排与执行</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td></tr>
               <tr class="matrix-group"><td colspan="9">多代理与团队协作</td></tr>
               <tr><td>22</td><td><a href="#t22">Sub Agent 与 Agent Team</a></td><td>多代理与团队协作</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>23</td><td><a href="#t23">Worktree</a></td><td>多代理与团队协作</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status gap">未见</span></td></tr>
-              <tr><td>24</td><td><a href="#t24">Channels</a></td><td>多代理与团队协作</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status gap">未见</span></td></tr>
-              <tr><td>25</td><td><a href="#t25">Todo 与进度可视化</a></td><td>多代理与团队协作</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>23</td><td><a href="#t23">Worktree</a></td><td>多代理与团队协作</td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td></tr>
+              <tr><td>24</td><td><a href="#t24">Channels</a></td><td>多代理与团队协作</td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td></tr>
+              <tr><td>25</td><td><a href="#t25">Todo 与进度可视化</a></td><td>多代理与团队协作</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
               <tr class="matrix-group"><td colspan="9">治理、安全与成本控制</td></tr>
-              <tr><td>26</td><td><a href="#t26">Hook</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>27</td><td><a href="#t27">安全审核</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>26</td><td><a href="#t26">Hook</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>27</td><td><a href="#t27">安全审核</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
               <tr><td>28</td><td><a href="#t28">企业版、专业版、计费</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
               <tr><td>29</td><td><a href="#t29">管理配置</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
               <tr><td>30</td><td><a href="#t30">OpenSec</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
               <tr><td>31</td><td><a href="#t31">权限、审批与沙箱</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>32</td><td><a href="#t32">Secrets / Vault</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>32</td><td><a href="#t32">Secrets / Vault</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
               <tr><td>33</td><td><a href="#t33">隐私、数据治理与合规</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>34</td><td><a href="#t34">用量分析与成本追踪</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>35</td><td><a href="#t35">可观测性、审计与追踪</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>36</td><td><a href="#t36">模型选择、BYOK 与路由</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>37</td><td><a href="#t37">Prompt Caching 与成本优化</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>34</td><td><a href="#t34">用量分析与成本追踪</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>35</td><td><a href="#t35">可观测性、审计与追踪</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>36</td><td><a href="#t36">模型选择、BYOK 与路由</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>37</td><td><a href="#t37">Prompt Caching 与成本优化</a></td><td>治理、安全与成本控制</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
               <tr class="matrix-group"><td colspan="9">开发体验与多模态输入</td></tr>
-              <tr><td>38</td><td><a href="#t38">Computer Use</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>39</td><td><a href="#t39">Figma</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td></tr>
-              <tr><td>40</td><td><a href="#t40">调试</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>41</td><td><a href="#t41">自动补全与 Inline</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>42</td><td><a href="#t42">浏览器预览、测试与部署</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>43</td><td><a href="#t43">多模态输入</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>38</td><td><a href="#t38">Computer Use</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>39</td><td><a href="#t39">Figma</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>40</td><td><a href="#t40">调试</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>41</td><td><a href="#t41">自动补全与 Inline</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>42</td><td><a href="#t42">浏览器预览、测试与部署</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>43</td><td><a href="#t43">多模态输入</a></td><td>开发体验与多模态输入</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
               <tr class="matrix-group"><td colspan="9">交付、评审与能力复用</td></tr>
-              <tr><td>44</td><td><a href="#t44">Artifacts</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>45</td><td><a href="#t45">Review</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>44</td><td><a href="#t44">Artifacts</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>45</td><td><a href="#t45">Review</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
               <tr><td>46</td><td><a href="#t46">Superpowers</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
               <tr><td>47</td><td><a href="#t47">设计模式</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>48</td><td><a href="#t48">画布</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td></tr>
-              <tr><td>49</td><td><a href="#t49">插件、Skills、Marketplace</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
-              <tr><td>50</td><td><a href="#t50">Checkpoint / 回滚</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>48</td><td><a href="#t48">画布</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td></tr>
+              <tr><td>49</td><td><a href="#t49">插件、Skills、Marketplace</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td></tr>
+              <tr><td>50</td><td><a href="#t50">Checkpoint / 回滚</a></td><td>交付、评审与能力复用</td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status yes">明确</span></td><td><span class="coverage-status gap">未见</span></td><td><span class="coverage-status near">相近</span></td><td><span class="coverage-status gap">未见</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -1131,12 +1151,12 @@
           <table class="matrix plan-table">
             <thead><tr><th>产品</th><th>个人版定位</th><th>团队 / 企业版定位</th><th>核心差异</th><th>采购判断</th><th>官方依据</th></tr></thead>
             <tbody>
+              <tr><td>华为云码道</td><td>体验版适合个人体验 / 企业测试，免费但限 500万 Tokens/月和 5,000 Codebase 文件。</td><td>基础版 / 专业版按席位计费，更接近团队和企业采购形态。</td><td>基础版增加智能体中心、技能和规则中心；专业版进一步增加操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单、安全隔离代码仓，并给到 6000万 Tokens/席位/月。</td><td>体验版用于验证；基础版适合小团队规模化；专业版适合政企、金融、研发平台等需要治理和国产云生态的场景。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道定价</a></td></tr>
               <tr><td>Claude</td><td>Free / Pro / Max 面向个人高频使用，Max 用 5x / 20x 提升会话容量。</td><td>Team Standard / Premium 面向 2-150 人团队；Enterprise 面向更大组织和合规需求。</td><td>个人版核心是更高使用量；团队版增加成员管理、SSO、域捕获、JIT、RBAC、连接器、spend controls，并保留 Claude Code 使用。</td><td>个人开发者选 Pro/Max；团队采购至少从 Team Standard 评估，重度研发席位用 Team Premium 或 Max 类高配。</td><td><a href="https://support.claude.com/en/articles/11049762-choose-a-claude-plan">Plan</a>、<a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">Team</a></td></tr>
               <tr><td>Qoder</td><td>Free / Pro / Pro+ / Ultra 以个人 Credits 和 Quest、Repo Wiki、Knowledge Card 为主。</td><td>Teams / Enterprise 面向组织管理、共享资源和安全治理。</td><td>个人版 Credits 归个人；Teams 每席含 3,000 Credits/月；Enterprise 席位更便宜但不含 Credits，依赖 Shared Add-on Credits，并增加模型路由、内容安全策略、审计、OpenAPI、插件/Skill 集中分发。</td><td>个人重度 Agent 选 Pro+ / Ultra；企业要先决定是“每席固定额度”还是“组织共享额度 + 治理优先”。</td><td><a href="https://docs.qoder.com/account/pricing">Individual</a>、<a href="https://docs.qoder.com/account/enterprise/pricing">Enterprise</a></td></tr>
               <tr><td>Codex</td><td>Free / Go / Plus / Pro 面向个人 ChatGPT 账号，Pro 用 5x / 20x 提升 Codex rate limits；API Key 是独立 token 计费路径。</td><td>Business / Enterprise / Edu 面向团队工作区和组织治理。</td><td>个人版强调本地 CLI、IDE、Web、云任务和个人 credits；Business 增加安全 workspace、更大 VM、SAML SSO、默认不训练；Enterprise/Edu 增加 SCIM、EKM、RBAC、审计日志、数据保留和驻留控制。</td><td>个人研发用 Plus/Pro；团队统一代码审查、云任务和治理时选 Business 起步，强合规选 Enterprise。</td><td><a href="https://learn.chatgpt.com/docs/pricing">Pricing</a>、<a href="https://help.openai.com/en/articles/11481834-chatgpt-rate-card-business-enterpriseedu">Rate Card</a></td></tr>
               <tr><td>Cursor</td><td>Hobby / Pro / Pro+ / Ultra 面向个人 IDE Agent，按 API usage included 和一方模型池区分强度。</td><td>Teams Standard / Premium / Enterprise 面向协作、共享上下文和治理。</td><td>个人版侧重 Tab、Agent、Bugbot、Cloud Agents；Teams 增加集中计费、内部 rules/skills/plugins marketplace、团队共享上下文、用量分析、团队隐私模式、SAML/OIDC；Enterprise 增加 pooled usage、SCIM、访问控制、审计、AI code tracking API。</td><td>单人开发按 Pro/Pro+/Ultra 分层；组织落地建议 Teams Standard 起，重度 Agent 成员用 Premium，强合规走 Enterprise。</td><td><a href="https://cursor.com/docs/models-and-pricing">Models & Pricing</a>、<a href="https://cursor.com/docs/account/teams/pricing">Teams</a></td></tr>
               <tr><td>Trae</td><td>Free / Lite / Pro / Pro+ / Ultra 为公开主线，按 Basic Usage、Solo 并发和 early access 区分。</td><td>企业方案通过 BytePlus 联系，官网公开页未披露企业额度细节。</td><td>公开信息中，个人版可明确比较 Basic Usage、Solo Agent 并发、Builder/Coder 能力；企业版的席位、SSO、审计、共享额度等需要销售确认。</td><td>个人和小团队可先用 Pro+ / Ultra 试点；企业采购不要只引用个人价格，需要单独向 BytePlus 确认组织治理、数据边界和额度模型。</td><td><a href="https://www.trae.ai/pricing">Pricing</a>、<a href="https://docs.trae.ai/ide/new-plans-and-billing">Plans</a></td></tr>
-              <tr><td>华为云码道</td><td>体验版适合个人体验 / 企业测试，免费但限 500万 Tokens/月和 5,000 Codebase 文件。</td><td>基础版 / 专业版按席位计费，更接近团队和企业采购形态。</td><td>基础版增加智能体中心、技能和规则中心；专业版进一步增加操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单、安全隔离代码仓，并给到 6000万 Tokens/席位/月。</td><td>体验版用于验证；基础版适合小团队规模化；专业版适合政企、金融、研发平台等需要治理和国产云生态的场景。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道定价</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -1146,6 +1166,9 @@
           <table class="matrix plan-table">
             <thead><tr><th>产品</th><th>套餐</th><th>公开价格</th><th>Tokens / 额度口径</th><th>能力项差异</th><th>官方依据</th></tr></thead>
             <tbody>
+              <tr><td>华为云码道</td><td>体验版</td><td>¥0</td><td>500万 Tokens/月；知识空间 500MB；Codebase 5,000 文件。</td><td>限量体验 Agent 基础能力：问答、编码、MCP、Rules、Skills；个人体验/企业测试，至高 50 席位。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
+              <tr><td>华为云码道</td><td>基础版</td><td>¥39/席位/月</td><td>2000万 Tokens/席位/月；知识空间 5GB；Codebase 50,000 文件。</td><td>含体验版能力，并增加智能体中心、技能和规则中心；小型企业/团队性价比优选，至高 100 席位。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
+              <tr><td>华为云码道</td><td>专业版</td><td>¥139/席位/月</td><td>6000万 Tokens/席位/月；知识空间 20GB；Codebase 100,000 文件。</td><td>增加操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单、安全隔离代码仓等企业治理能力。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
               <tr><td>Claude</td><td>Free</td><td>$0</td><td>Limited usage，未公开固定 token 数。</td><td>适合偶发问答和体验；不建议作为团队 AI Coding 主力席位。</td><td><a href="https://support.claude.com/en/articles/11049762-choose-a-claude-plan">Choose a Claude plan</a></td></tr>
               <tr><td>Claude</td><td>Pro</td><td>$20/月，$200/年</td><td>标准用量；Claude、Claude Code、Claude Desktop 共用限制。</td><td>覆盖常规个人开发；Claude Code 可用于终端和 IDE，但长任务会受共享用量影响。</td><td><a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">Pro plan</a>、<a href="https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan">Claude Code with Pro/Max</a></td></tr>
               <tr><td>Claude</td><td>Max 5x</td><td>$100/月</td><td>每会话约 5x Pro 容量；仍是周用量限制，不公开 token 包。</td><td>面向高频 Claude Code 用户；包含优先访问、Claude Code、Cowork 等更高使用能力。</td><td><a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan">Max plan</a></td></tr>
@@ -1172,10 +1195,6 @@
               <tr><td>Trae</td><td>Pro</td><td>当前页显示 $0（原 $10，活动）；年付折 $7.5/月；一次性月付 $15</td><td>Basic Usage $20/月。</td><td>高级模型请求、自动补全不限；并行 Solo Agent 10，适合日常 Agent 开发。</td><td><a href="https://www.trae.ai/pricing">Trae Pricing</a></td></tr>
               <tr><td>Trae</td><td>Pro+</td><td>$30/月；年付折 $22.5/月；一次性月付 $45</td><td>Basic Usage $90/月。</td><td>开启 early access；并行 Solo Agent 15，适合重度 Agent 与多任务。</td><td><a href="https://www.trae.ai/pricing">Trae Pricing</a></td></tr>
               <tr><td>Trae</td><td>Ultra</td><td>$100/月；年付折 $75/月；一次性月付 $150</td><td>Basic Usage $400/月。</td><td>最高个人额度；并行 Solo Agent 20，适合长任务、复杂项目和高频生成。</td><td><a href="https://www.trae.ai/pricing">Trae Pricing</a></td></tr>
-
-              <tr><td>华为云码道</td><td>体验版</td><td>¥0</td><td>500万 Tokens/月；知识空间 500MB；Codebase 5,000 文件。</td><td>限量体验 Agent 基础能力：问答、编码、MCP、Rules、Skills；个人体验/企业测试，至高 50 席位。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
-              <tr><td>华为云码道</td><td>基础版</td><td>¥39/席位/月</td><td>2000万 Tokens/席位/月；知识空间 5GB；Codebase 50,000 文件。</td><td>含体验版能力，并增加智能体中心、技能和规则中心；小型企业/团队性价比优选，至高 100 席位。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
-              <tr><td>华为云码道</td><td>专业版</td><td>¥139/席位/月</td><td>6000万 Tokens/席位/月；知识空间 20GB；Codebase 100,000 文件。</td><td>增加操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单、安全隔离代码仓等企业治理能力。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -1185,6 +1204,7 @@
           <table class="matrix plan-table">
             <thead><tr><th>产品</th><th>套餐</th><th>公开价格</th><th>Tokens / 额度口径</th><th>能力项差异</th><th>官方依据</th></tr></thead>
             <tbody>
+              <tr><td>华为云码道</td><td>基础版 / 专业版</td><td>¥39 或 ¥139/席位/月</td><td>2000万 或 6000万 Tokens/席位/月。</td><td>基础版适合小团队；专业版适合需要 SSO、操作日志、模型管理、自定义模型、用量管理和 IP 白名单的企业团队。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
               <tr><td>Claude</td><td>Team Standard</td><td>$25/成员/月；年付 $20/成员/月</td><td>每会话约 1.25x Pro；周用量限制。</td><td>2-150 席；含 Claude Code、团队管理、SSO、域捕获、JIT、RBAC、连接器和 spend controls。</td><td><a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">Claude Team plan</a></td></tr>
               <tr><td>Claude</td><td>Team Premium</td><td>$125/成员/月；年付 $100/成员/月</td><td>每会话约 6.25x Pro；有跨模型与 Sonnet 周限制。</td><td>适合重度研发团队成员；比 Standard 明显提升用量，并保留团队治理能力。</td><td><a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">Claude Team plan</a></td></tr>
               <tr><td>Claude</td><td>Enterprise</td><td>联系销售</td><td>按企业合约。</td><td>面向 150+ 席或更强合规要求；Claude Code 在新 Enterprise/self-serve 席位中可用，旧计划按席位形态区分。</td><td><a href="https://support.claude.com/en/articles/11845131-use-claude-code-with-your-team-or-enterprise-plan">Claude Code Team/Enterprise</a></td></tr>
@@ -1202,8 +1222,6 @@
 
               <tr><td>Trae</td><td>Enterprise</td><td>联系 BytePlus</td><td>官网自助页未公开企业 token/额度表。</td><td>当前公开价格页主要展示个人五档；企业方案通过 BytePlus 入口联系。</td><td><a href="https://www.trae.ai/pricing">Trae Pricing</a></td></tr>
               <tr><td>Trae</td><td>On-demand Usage</td><td>按超额 token 成本结算</td><td>月度 Basic Usage / Bonus Usage 耗尽后，Lite/Pro/Pro+/Ultra 可开启；按模型官方 API 价折算。</td><td>每累计 $3 触发一次付款；适合防止任务中断，但需要团队侧设置预算提醒。</td><td><a href="https://docs.trae.ai/ide/on-demand-usage">Trae On-demand Usage</a></td></tr>
-
-              <tr><td>华为云码道</td><td>基础版 / 专业版</td><td>¥39 或 ¥139/席位/月</td><td>2000万 或 6000万 Tokens/席位/月。</td><td>基础版适合小团队；专业版适合需要 SSO、操作日志、模型管理、自定义模型、用量管理和 IP 白名单的企业团队。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -1217,32 +1235,11 @@
               <tr><td>研发个人重度 Agent、长任务、Quest/知识资产</td><td>Qoder Pro+ / Ultra，Cursor Pro+ / Ultra，Claude Max</td><td>Qoder 给 Credits 和知识资产，Cursor 给 API usage + Cloud/Review，Claude Max 给更高会话用量。</td></tr>
               <tr><td>代码审查、安全、CLI/云端工作区一体化</td><td>Codex Plus/Pro/Business，Cursor Teams，Claude Team</td><td>这几类产品在 review、cloud task、权限/审计和终端/IDE 协同方面证据更强。</td></tr>
               <tr><td>设计稿到代码、前端预览、Solo 开发闭环</td><td>Trae Pro+ / Ultra，Cursor Pro+</td><td>Trae 的 Figma to Code、SOLO、浏览器预览和 Dollar Usage 模型适合前端产品化试点。</td></tr>
-              <tr><td>企业治理、SSO、审计、模型路由</td><td>Cursor Enterprise、Qoder Enterprise、Codex Enterprise、华为云码道专业版、Claude Team/Enterprise</td><td>这些档位才把 AI Coding 从个人效率工具变成可管理的企业平台。</td></tr>
+              <tr><td>企业治理、SSO、审计、模型路由</td><td>华为云码道专业版、Cursor Enterprise、Qoder Enterprise、Codex Enterprise、Claude Team/Enterprise</td><td>这些档位才把 AI Coding 从个人效率工具变成可管理的企业平台。</td></tr>
             </tbody>
           </table>
         </div>
       </section>
-
-
-      <section class="panel" id="codearts-analysis">
-        <h2 class="section-title">华为云码道（CodeArts）专项分析</h2>
-        <p class="lead">截至 2026-07-17，华为云码道已经不是单纯的补全工具，而是“AI IDE + Code Agent + Codebase + 企业治理”的组合。官方文档显示，它支持项目级代码生成、代码续写、研发知识问答、单元测试、Codebase 索引、Skills、Hooks、Slash Commands、记忆、Checkpoint、多会话、MCP、沙箱和 AgentTeam。</p>
-        <div class="table-scroll">
-          <table class="matrix">
-            <thead><tr><th>分析维度</th><th>码道能力判断</th><th>团队赋能价值</th><th>官网依据</th></tr></thead>
-            <tbody>
-              <tr><td>产品定位</td><td>深度融合 IDE、自主开发模式与代码大模型，覆盖项目级生成、续写、研发知识问答和单测生成。</td><td>适合作为国产 AI Coding 工具进入选型池，尤其适合华为云、鸿蒙、政企合规和中文研发组织场景。</td><td><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0001.html">产品介绍</a></td></tr>
-              <tr><td>工程执行</td><td>智能体可做需求理解、任务规划、跨文件修改、工具调用和人工确认；规范开发模式按需求规格、方案、任务、执行推进。</td><td>可对标 Goal / Workflow / Quest / Solo，培训时可用“规范驱动开发”讲清从需求到代码的闭环。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0005.html">智能体对话</a></td></tr>
-              <tr><td>知识与上下文</td><td>Codebase 支持本地个人索引和云端共享索引；文档也提到关键词、语义、图谱等代码库理解方式。</td><td>适合做存量系统接手、新人上手、复杂项目问答和团队知识沉淀。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0001.html">代码库索引</a></td></tr>
-              <tr><td>扩展机制</td><td>MCP 连接外部工具，Skills 封装任务流程，Hooks 在生命周期节点执行确定性脚本，Slash Commands 固化常用操作。</td><td>这组能力说明码道可承载企业内部工具链接入，而不是只靠聊天提示词。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0010.html">MCP</a>、<a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0024.html">Skills</a>、<a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0036.html">Hooks</a>、<a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0038.html">Slash Commands</a></td></tr>
-              <tr><td>多智能体协作</td><td>内置 AgentTeam，采用 Leader 编排和 Teammate 执行，并支持上下文隔离、领域专家子智能体和权限隔离。</td><td>可对标 Sub Agent / Agent Team，适合把安全审查、代码探索、需求生成、设计生成拆成不同子任务。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0052.html">内置智能体</a></td></tr>
-              <tr><td>治理与安全</td><td>沙箱限制文件、网络和高危命令；专业版包含操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单等能力。</td><td>对政企和金融医疗等合规行业，码道的采购价值不只在补全，而在权限边界、审计和国产云生态协同。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0045.html">沙箱</a>、<a href="https://codearts.huaweicloud.com/pricing.html">选型与定价</a></td></tr>
-              <tr><td>短板与待确认</td><td>本轮官网证据中，Figma 原生设计稿转代码、Repo Wiki/知识卡片同名能力、Worktree、渠道集成、远程 Cloud Agent 异步执行仍不如部分竞品明确。</td><td>选型时应把码道定位为“企业治理 + 国产生态 + IDE 智能体”强项，不要直接等同所有海外工具的云端协作形态。</td><td><a href="https://codearts.huaweicloud.com/">码道官网</a>、<a href="https://codearts.huaweicloud.com/pricing.html">价格方案</a></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
       <div class="topic-groups" id="cards">
         <section class="topic-group" id="topic-group-context-assets">
           <div class="topic-group-head">
@@ -2210,6 +2207,22 @@
       <section class="foot">
         <h2 class="section-title">官网来源索引</h2>
         <ul class="source-grid">
+          <li><a href="https://codearts.huaweicloud.com/">华为云码道官网</a></li>
+          <li><a href="https://codearts.huaweicloud.com/pricing.html">华为云码道选型与定价</a></li>
+          <li><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0001.html">华为云码道产品介绍</a></li>
+          <li><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0004.html">华为云码道产品功能</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0005.html">华为云码道智能体对话</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0001.html">华为云码道代码库索引</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0010.html">华为云码道 MCP</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0024.html">华为云码道 Skills</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0036.html">华为云码道 Hooks</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0038.html">华为云码道 Slash Commands</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0039.html">华为云码道记忆</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0040.html">华为云码道检查点</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0034.html">华为云码道多会话管理</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0045.html">华为云码道沙箱</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0052.html">华为云码道内置智能体</a></li>
+
           <li><a href="https://code.claude.com/docs/en/overview">Claude Code Overview</a></li>
           <li><a href="https://code.claude.com/docs/en/mcp">Claude MCP</a></li>
           <li><a href="https://code.claude.com/docs/en/commands">Claude Commands</a></li>
@@ -2327,22 +2340,6 @@
           <li><a href="https://docs.trae.ai/ide/new-plans-and-billing">Trae Plans & Billing</a></li>
           <li><a href="https://docs.trae.ai/ide/plans-and-billing-faqs">Trae Billing FAQs</a></li>
           <li><a href="https://docs.trae.ai/ide/on-demand-usage">Trae On-demand Usage</a></li>
-
-          <li><a href="https://codearts.huaweicloud.com/">华为云码道官网</a></li>
-          <li><a href="https://codearts.huaweicloud.com/pricing.html">华为云码道选型与定价</a></li>
-          <li><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0001.html">华为云码道产品介绍</a></li>
-          <li><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0004.html">华为云码道产品功能</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0005.html">华为云码道智能体对话</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0001.html">华为云码道代码库索引</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0010.html">华为云码道 MCP</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0024.html">华为云码道 Skills</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0036.html">华为云码道 Hooks</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0038.html">华为云码道 Slash Commands</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0039.html">华为云码道记忆</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0040.html">华为云码道检查点</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0034.html">华为云码道多会话管理</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0045.html">华为云码道沙箱</a></li>
-          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0052.html">华为云码道内置智能体</a></li>
         </ul>
       </section>
     </section>
