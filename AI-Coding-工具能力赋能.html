@@ -594,11 +594,6 @@
       color: var(--brand-dark);
       font-size: 13px;
     }
-    .qoder-card-note {
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
     .topic {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -2160,6 +2155,10 @@
               <div class="logic-step"><b>4. 双轮自迭代</b><span>代码侧由 commit 触发增量更新；对话侧从问题、计划和采纳的 Spec 中提炼新知识。</span></div>
               <div class="logic-step"><b>5. 任务时复用</b><span>Agent 在生成、审查、调试和重构时检索高密度上下文，而不是重新扫描整个仓库。</span></div>
             </div>
+            <figure>
+              <img src="https://img.alicdn.com/imgextra/i3/O1CN01KVQ7LM1Cgt6YaSxvf_!!6000000000111-2-tps-1670-1474.png" alt="Qoder Knowledge Card and Repo Wiki flow" />
+              <figcaption>官方图：原始工程信号先凝练为 Knowledge Card，再组织成 Repo Wiki。</figcaption>
+            </figure>
             <div class="table-scroll">
               <table class="matrix">
                 <thead><tr><th>设计点</th><th>解决什么问题</th><th>团队应该怎样理解</th></tr></thead>
@@ -2187,6 +2186,10 @@
               <div class="logic-step"><b>4. Ultra Review</b><span>多 Agent 并行审查正确性、安全、性能、架构一致性和可维护性，再做误报剔除和重复问题合并。</span></div>
               <div class="logic-step"><b>5. 验证与 Auto-Heal</b><span>Computer Use、单元/集成测试、CI、日志和回归数据形成发现、修复、验证、提交 PR 的闭环。</span></div>
             </div>
+            <figure>
+              <img src="https://img.alicdn.com/imgextra/i2/O1CN014hDvcv26UczXCARe2_!!6000000007665-0-tps-1832-838.jpg" alt="Qoder V1 mega rewrite case" />
+              <figcaption>官方图：Qoder V1 大规模重写案例，适合作为方法论样例而非直接采购证据。</figcaption>
+            </figure>
             <div class="table-scroll">
               <table class="matrix">
                 <thead><tr><th>阶段</th><th>人的职责</th><th>Agent 的职责</th><th>关键控制点</th></tr></thead>
@@ -2217,50 +2220,9 @@
                 </tbody>
               </table>
             </div>
-            <p class="qoder-card-note">下方两张卡片保留为快速回顾，便于培训时在讲完整逻辑后做 1 分钟复盘。</p>
           </div>
         </div>
       </section>
-
-      <div class="cards">
-        <article id="qoder-knowledge-engine-blog" class="topic" data-tags="qoder knowledge engine knowledge cards repowiki qmind rag codebase index memory">
-          <div class="topic-head"><h2>Qoder 补充 1. 自迭代知识引擎</h2><div class="tags"><span class="tag strong">Qoder 官方博客</span><span class="tag partial">知识资产</span><span class="tag gap">需自测</span></div></div>
-          <div class="topic-body">
-            <div>
-              <div class="explain">
-                <div class="box"><h3>是什么</h3><p>面向软件工程的知识沉淀机制：把代码、提交差异、对话、计划和 Spec 中的工程经验抽取为 Knowledge Card，再汇总为 Repo Wiki。前者面向 Agent 检索，后者面向团队理解。</p></div>
-                <div class="box"><h3>怎么用</h3><p>先让工具生成仓库级 Repo Wiki，再把架构、编码规范、技术栈、历史决策和常见坑沉淀为知识卡；后续通过 commit 增量更新，通过对话和计划补充隐性知识。</p></div>
-                <div class="box"><h3>价值</h3><p>降低每次任务重新解释项目的成本，让 Agent 在生成、审查和调试时更容易遵守架构边界、代码规范和运行环境约束，也能支持新人学习和跨团队交付。</p></div>
-              </div>
-              <div class="practice"><strong>团队落地：</strong>不要只验证“能生成 Wiki”。应选 2-3 个真实仓库，用检索命中率、无关上下文比例、PR 一次通过率、规范违规数和返工时长来复核知识引擎价值。</div>
-              <div class="sources"><a href="https://qoder.com/blog/qoder-llm?type=%E6%8A%80%E6%9C%AF">Qoder Blog: Knowledge Engine</a><a href="https://docs.qoder.com/account/enterprise/knowledge-base">Qoder Knowledge Engine Docs</a><a href="https://docs.qoder.com/account/enterprise/qmind">Qoder QMind Docs</a></div>
-            </div>
-            <figure>
-              <img src="https://img.alicdn.com/imgextra/i3/O1CN01KVQ7LM1Cgt6YaSxvf_!!6000000000111-2-tps-1670-1474.png" alt="Qoder Knowledge Card and Repo Wiki flow" />
-              <figcaption>官方图：原始工程信号先凝练为 Knowledge Card，再组织成 Repo Wiki。</figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <article id="qoder-rewrite-method-blog" class="topic" data-tags="qoder quest workflow sub agent review computer use auto heal spec code graph repowiki ci debug">
-          <div class="topic-head"><h2>Qoder 补充 2. 存量巨型工程重写方法</h2><div class="tags"><span class="tag strong">Qoder 官方案例</span><span class="tag partial">Agentic / Autonomous</span><span class="tag gap">需复核</span></div></div>
-          <div class="topic-body">
-            <div>
-              <div class="explain">
-                <div class="box"><h3>是什么</h3><p>Qoder 以自身系统升级为案例，描述在约 400 万行存量工程中新增约 50 万行代码、3 周交付的工作法。核心不是让 AI 直接重写，而是先建立可查询的项目知识和可执行的验证体系。</p></div>
-                <div class="box"><h3>怎么用</h3><p>五层推进：Repo Wiki、代码知识图谱和历史 Spec 做地基；Ultra Spec 写清 I/O、业务规则、边界 Case、安全边界和测试计划；Team Lead 按依赖图派给专项 Agent；Ultra Review 并行查正确性、安全、性能和架构一致性；Computer Use、CI、日志和回归数据驱动 Auto-Heal。</p></div>
-                <div class="box"><h3>价值</h3><p>把工程师角色从“主要写代码”前移到“定义什么算对”：明确 Spec 精度、架构边界、审查视角、验证判据和最终合入决策。适合复杂迁移、重构和多模块升级。</p></div>
-              </div>
-              <div class="practice"><strong>团队落地：</strong>先做单模块试点，设置编译通过率、测试通过率、Review 缺陷密度、返工周期、回滚率、人工介入点和成本消耗等指标；不可逆操作、生产配置和安全边界必须保留人工审批。</div>
-              <div class="sources"><a href="https://qoder.com/blog/qoder-v1-mega-rewrite">Qoder Blog: V1 Mega Rewrite</a><a href="https://docs.qoder.com/user-guide/quest/spec-driven.md">Qoder Spec-driven</a><a href="https://docs.qoder.com/cloud-agents/managed-agents">Qoder Managed Agents</a><a href="https://docs.qoder.com/user-guide/quest/overview">Qoder Quest</a></div>
-            </div>
-            <figure>
-              <img src="https://img.alicdn.com/imgextra/i2/O1CN014hDvcv26UczXCARe2_!!6000000007665-0-tps-1832-838.jpg" alt="Qoder V1 mega rewrite case" />
-              <figcaption>官方图：Qoder V1 大规模重写案例，适合作为方法论样例而非直接采购证据。</figcaption>
-            </figure>
-          </div>
-        </article>
-      </div>
 
       <section class="foot">
         <h2 class="section-title">官网来源索引</h2>
