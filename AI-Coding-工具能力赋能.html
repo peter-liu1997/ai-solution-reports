@@ -721,9 +721,9 @@
       background: #fff;
       white-space: nowrap;
     }
-    .tag.strong { background: var(--brand-soft); border-color: #e6a1a6; color: var(--brand-dark); }
-    .tag.partial { background: var(--soft-amber); border-color: #edc681; color: #6f3c00; }
-    .tag.gap { background: #f5f1f1; border-color: #d9cdcd; color: #605255; }
+    .tag.strong { background: var(--status-yes-bg); border-color: var(--status-yes-border); color: var(--status-yes-text); }
+    .tag.partial { background: var(--status-near-bg); border-color: var(--status-near-border); color: var(--status-near-text); }
+    .tag.gap { background: var(--status-gap-bg); border-color: var(--status-gap-border); color: var(--status-gap-text); }
     figure {
       margin: 0;
       border: 1px solid var(--line);
@@ -925,7 +925,7 @@
     <div class="topbar">
       <div>
         <h1>AI Coding 工具能力赋能</h1>
-        <p class="subtitle">华为云码道（CodeArts） / Claude Code / Qoder / OpenAI Codex / Cursor / Trae：能力框架、产品差异、套餐选型；官网资料复核日期：2026-07-18</p>
+        <p class="subtitle">华为云码道（CodeArts） / Claude Code / Qoder / OpenAI Codex / Cursor / Trae：能力框架、产品差异、套餐认知；官网资料复核日期：2026-07-18</p>
       </div>
       <div class="controls">
         <input id="search" class="search" type="search" placeholder="搜索主题、工具或关键词" />
@@ -1009,7 +1009,7 @@
       <div class="legend">
         <span><span class="tag strong">官网明确</span> 官网存在同名或直接能力。</span>
         <span><span class="tag partial">能力相近</span> 名称不同，但可支撑同类实践。</span>
-        <span><span class="tag gap">证据不足</span> 未发现该厂商官网同名能力。</span>
+        <span><span class="tag gap">证据不足</span> 未发现该产品官网同名能力。</span>
       </div>
     </aside>
 
@@ -1056,13 +1056,13 @@
           <table class="matrix">
             <thead><tr><th>分析维度</th><th>码道能力判断</th><th>团队赋能价值</th><th>官网依据</th></tr></thead>
             <tbody>
-              <tr><td>产品定位</td><td>深度融合 IDE、自主开发模式与代码大模型，覆盖项目级生成、续写、研发知识问答和单测生成。</td><td>适合作为国产 AI Coding 工具进入选型池，尤其适合华为云、鸿蒙、政企合规和中文研发组织场景。</td><td><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0001.html">产品介绍</a></td></tr>
+              <tr><td>产品定位</td><td>深度融合 IDE、自主开发模式与代码大模型，覆盖项目级生成、续写、研发知识问答和单测生成。</td><td>适合作为国产 AI Coding 工具纳入团队试点视野，尤其适合华为云、鸿蒙、高合规和中文研发组织场景。</td><td><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0001.html">产品介绍</a></td></tr>
               <tr><td>工程执行</td><td>智能体可做需求理解、任务规划、跨文件修改、工具调用和人工确认；规范开发模式按需求规格、方案、任务、执行推进。</td><td>可对标 Goal / Workflow / Quest / Solo，培训时可用“规范驱动开发”讲清从需求到代码的闭环。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0005.html">智能体对话</a></td></tr>
               <tr><td>知识与上下文</td><td>Codebase 支持本地个人索引和云端共享索引；文档也提到关键词、语义、图谱等代码库理解方式。</td><td>适合做存量系统接手、新人上手、复杂项目问答和团队知识沉淀。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0001.html">代码库索引</a></td></tr>
               <tr><td>扩展机制</td><td>MCP 连接外部工具，Skills 封装任务流程，Hooks 在生命周期节点执行确定性脚本，Slash Commands 固化常用操作。</td><td>这组能力说明码道可承载企业内部工具链接入，而不是只靠聊天提示词。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0010.html">MCP</a>、<a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0024.html">Skills</a>、<a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0036.html">Hooks</a>、<a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0038.html">Slash Commands</a></td></tr>
               <tr><td>多智能体协作</td><td>内置 AgentTeam，采用 Leader 编排和 Teammate 执行，并支持上下文隔离、领域专家子智能体和权限隔离。</td><td>可对标 Sub Agent / Agent Team，适合把安全审查、代码探索、需求生成、设计生成拆成不同子任务。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0052.html">内置智能体</a></td></tr>
-              <tr><td>治理与安全</td><td>沙箱限制文件、网络和高危命令；专业版包含操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单等能力。</td><td>对政企和金融医疗等合规行业，码道的采购价值不只在补全，而在权限边界、审计和国产云生态协同。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0045.html">沙箱</a>、<a href="https://codearts.huaweicloud.com/pricing.html">选型与定价</a></td></tr>
-              <tr><td>短板与待确认</td><td>本轮官网证据中，Figma 原生设计稿转代码、Repo Wiki/知识卡片同名能力、Worktree、渠道集成、远程 Cloud Agent 异步执行仍不如部分竞品明确。</td><td>选型时应把码道定位为“企业治理 + 国产生态 + IDE 智能体”强项，不要直接等同所有海外工具的云端协作形态。</td><td><a href="https://codearts.huaweicloud.com/">码道官网</a>、<a href="https://codearts.huaweicloud.com/pricing.html">价格方案</a></td></tr>
+              <tr><td>治理与安全</td><td>沙箱限制文件、网络和高危命令；专业版包含操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单等能力。</td><td>对高合规研发团队，码道的学习重点不只在补全，而在权限边界、审计和国产云生态协同。</td><td><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0045.html">沙箱</a>、<a href="https://codearts.huaweicloud.com/pricing.html">版本与定价</a></td></tr>
+              <tr><td>短板与待确认</td><td>本轮官网证据中，Figma 原生设计稿转代码、Repo Wiki/知识卡片同名能力、Worktree、渠道集成、远程 Cloud Agent 异步执行仍不如部分产品明确。</td><td>团队培训时应把码道定位为“企业治理 + 国产生态 + IDE 智能体”强项，不要直接等同所有海外工具的云端协作形态。</td><td><a href="https://codearts.huaweicloud.com/">码道官网</a>、<a href="https://codearts.huaweicloud.com/pricing.html">价格方案</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -1089,7 +1089,7 @@
           </div>
           <div class="category-card">
             <h3>治理、安全与成本控制</h3>
-            <p>让自动化可控、可审计、可采购评估，避免凭证、权限、成本和隐私风险失控。</p>
+            <p>让自动化可控、可审计、可试点评估，避免凭证、权限、成本和隐私风险失控。</p>
             <div class="capability-links"><a href="#t26">26 Hook</a><a href="#t27">27 安全审核</a><a href="#t28">28 计费</a><a href="#t29">29 管理配置</a><a href="#t30">30 OpenSec</a><a href="#t31">31 权限沙箱</a><a href="#t32">32 Secrets</a><a href="#t33">33 数据治理</a><a href="#t34">34 用量成本</a><a href="#t35">35 审计追踪</a><a href="#t36">36 模型路由</a><a href="#t37">37 Prompt Caching</a></div>
           </div>
           <div class="category-card">
@@ -1107,7 +1107,7 @@
 
       <section class="panel" id="product-coverage">
         <h2 class="section-title">产品能力覆盖矩阵</h2>
-        <p class="lead">这个表回答“哪些能力哪些产品有”，并按能力分类分组排序。矩阵采用证据等级：明确表示官网有同名或直接功能；相近表示名称不同但能支撑同类实践；未见表示本轮官网证据不足，不建议在采购或培训中作为该产品卖点。</p>
+        <p class="lead">这个表回答“哪些能力哪些产品有”，并按能力分类分组排序。矩阵采用证据等级：明确表示官网有同名或直接功能；相近表示名称不同但能支撑同类实践；未见表示本轮官网证据不足，不建议在团队培训中作为确定能力讲解。</p>
         <p class="note">覆盖结论：华为云码道强在 AI IDE、Codebase、规范驱动开发、MCP/Skills/Hooks、AgentTeam、沙箱与企业级管理；Claude 强在多代理、工作流、规则、审查和治理；Qoder 强在知识资产、Quest、Cloud Agent、企业治理和可视化任务；Codex 强在 CLI/Cloud、审查、安全、权限沙箱和自动化接入；Cursor 强在 IDE Agent、代码索引、Cloud Agent、Review、Canvas 和补全；Trae 强在 SOLO、Figma、Inline、浏览器预览、记忆、Hooks 和轻量开发闭环。</p>
         <div class="coverage-legend"><span class="coverage-status yes">明确</span><span>官网同名或直接能力</span><span class="coverage-status near">相近</span><span>可支撑同类实践</span><span class="coverage-status gap">未见</span><span>未发现明确官网证据</span></div>
         <div class="coverage-wrap">
@@ -1177,26 +1177,26 @@
 
       <section class="panel" id="plan-pricing">
         <h2 class="section-title">套餐价格、Tokens/额度与能力差异</h2>
-        <p class="lead">截至 2026-07-17，各家 AI Coding 工具的计费口径并不统一。华为云码道直接公开月度 Tokens，Qoder 使用 Credits，Trae 使用 Dollar Usage / Basic Usage，Cursor 使用 API usage 与一方模型池，Claude 和 Codex 的 ChatGPT 订阅更多体现为 usage limits / rate limits。培训和采购时不要把这些额度直接按“1 token = 1 token”横向等值。</p>
-        <p class="note">预算原则：先按角色区分“轻量 IDE 辅助、日常 Agent、长任务/云端 Agent、企业治理”四类人群；再看额度是否公开、超额是否可付费续用、是否有审计/SSO/权限/模型路由。只有华为云码道套餐和部分 API/Max Mode 场景能直接按 Tokens 做硬预算，其他产品更适合按月度消耗曲线做试点测算。</p>
+        <p class="lead">截至 2026-07-17，各家 AI Coding 工具的计费口径并不统一。华为云码道直接公开月度 Tokens，Qoder 使用 Credits，Trae 使用 Dollar Usage / Basic Usage，Cursor 使用 API usage 与一方模型池，Claude 和 Codex 的 ChatGPT 订阅更多体现为 usage limits / rate limits。培训和试点规划时不要把这些额度直接按“1 token = 1 token”横向等值。</p>
+        <p class="note">额度规划原则：先按角色区分“轻量 IDE 辅助、日常 Agent、长任务/云端 Agent、企业治理”四类人群；再看额度是否公开、超额是否可付费续用、是否有审计/SSO/权限/模型路由。只有华为云码道套餐和部分 API/Max Mode 场景能直接按 Tokens 做硬性额度规划，其他产品更适合按月度消耗曲线做试点测算。</p>
         <div class="quota-grid">
           <div class="quota-card"><b>固定 Tokens</b><span>华为云码道公开 500万 / 2000万 / 6000万 Tokens；Codex API、Cursor Max Mode 等按模型 API token rate 消耗。</span></div>
-          <div class="quota-card"><b>Credits / 余额</b><span>Qoder Credits、Trae Dollar Usage、Cursor API usage 都是资源预算池，最终消耗仍受模型、上下文和任务复杂度影响。</span></div>
+          <div class="quota-card"><b>Credits / 余额</b><span>Qoder Credits、Trae Dollar Usage、Cursor API usage 都是资源额度池，最终消耗仍受模型、上下文和任务复杂度影响。</span></div>
           <div class="quota-card"><b>Usage limits</b><span>Claude Pro/Max/Team 与 ChatGPT Codex 订阅以共享用量、周限制、rate limits 体现，不公开固定 token 包。</span></div>
-          <div class="quota-card"><b>企业能力</b><span>团队采购不要只看单席价格，还要看 SSO、SCIM、审计、模型治理、仓库权限、云端 Agent 和用量分析。</span></div>
+          <div class="quota-card"><b>企业能力</b><span>团队学习和试点不要只看单席价格，还要看 SSO、SCIM、审计、模型治理、仓库权限、云端 Agent 和用量分析。</span></div>
         </div>
 
         <h3 class="section-title">个人版 vs 团队/企业版差异总览</h3>
         <div class="coverage-wrap">
           <table class="matrix plan-table">
-            <thead><tr><th>产品</th><th>个人版定位</th><th>团队 / 企业版定位</th><th>核心差异</th><th>采购判断</th><th>官方依据</th></tr></thead>
+            <thead><tr><th>产品</th><th>个人版定位</th><th>团队 / 企业版定位</th><th>核心差异</th><th>团队使用判断</th><th>官方依据</th></tr></thead>
             <tbody>
-              <tr><td>华为云码道</td><td>体验版适合个人体验 / 企业测试，免费但限 500万 Tokens/月和 5,000 Codebase 文件。</td><td>基础版 / 专业版按席位计费，更接近团队和企业采购形态。</td><td>基础版增加智能体中心、技能和规则中心；专业版进一步增加操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单、安全隔离代码仓，并给到 6000万 Tokens/席位/月。</td><td>体验版用于验证；基础版适合小团队规模化；专业版适合政企、金融、研发平台等需要治理和国产云生态的场景。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道定价</a></td></tr>
-              <tr><td>Claude</td><td>Free / Pro / Max 面向个人高频使用，Max 用 5x / 20x 提升会话容量。</td><td>Team Standard / Premium 面向 2-150 人团队；Enterprise 面向更大组织和合规需求。</td><td>个人版核心是更高使用量；团队版增加成员管理、SSO、域捕获、JIT、RBAC、连接器、spend controls，并保留 Claude Code 使用。</td><td>个人开发者选 Pro/Max；团队采购至少从 Team Standard 评估，重度研发席位用 Team Premium 或 Max 类高配。</td><td><a href="https://support.claude.com/en/articles/11049762-choose-a-claude-plan">Plan</a>、<a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">Team</a></td></tr>
+              <tr><td>华为云码道</td><td>体验版适合个人体验 / 企业测试，免费但限 500万 Tokens/月和 5,000 Codebase 文件。</td><td>基础版 / 专业版按席位计费，更接近团队规模化使用形态。</td><td>基础版增加智能体中心、技能和规则中心；专业版进一步增加操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单、安全隔离代码仓，并给到 6000万 Tokens/席位/月。</td><td>体验版用于验证；基础版适合小团队规模化；专业版适合高合规研发平台和国产云生态协同场景。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道定价</a></td></tr>
+              <tr><td>Claude</td><td>Free / Pro / Max 面向个人高频使用，Max 用 5x / 20x 提升会话容量。</td><td>Team Standard / Premium 面向 2-150 人团队；Enterprise 面向更大组织和合规需求。</td><td>个人版核心是更高使用量；团队版增加成员管理、SSO、域捕获、JIT、RBAC、连接器、spend controls，并保留 Claude Code 使用。</td><td>个人开发者选 Pro/Max；团队试点至少从 Team Standard 评估，重度研发席位用 Team Premium 或 Max 类高配。</td><td><a href="https://support.claude.com/en/articles/11049762-choose-a-claude-plan">Plan</a>、<a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">Team</a></td></tr>
               <tr><td>Qoder</td><td>Free / Pro / Pro+ / Ultra 以个人 Credits 和 Quest、Repo Wiki、Knowledge Card 为主。</td><td>Teams / Enterprise 面向组织管理、共享资源和安全治理。</td><td>个人版 Credits 归个人；Teams 每席含 3,000 Credits/月；Enterprise 席位更便宜但不含 Credits，依赖 Shared Add-on Credits，并增加模型路由、内容安全策略、审计、OpenAPI、插件/Skill 集中分发。</td><td>个人重度 Agent 选 Pro+ / Ultra；企业要先决定是“每席固定额度”还是“组织共享额度 + 治理优先”。</td><td><a href="https://docs.qoder.com/account/pricing">Individual</a>、<a href="https://docs.qoder.com/account/enterprise/pricing">Enterprise</a></td></tr>
               <tr><td>Codex</td><td>Free / Go / Plus / Pro 面向个人 ChatGPT 账号，Pro 用 5x / 20x 提升 Codex rate limits；API Key 是独立 token 计费路径。</td><td>Business / Enterprise / Edu 面向团队工作区和组织治理。</td><td>个人版强调本地 CLI、IDE、Web、云任务和个人 credits；Business 增加安全 workspace、更大 VM、SAML SSO、默认不训练；Enterprise/Edu 增加 SCIM、EKM、RBAC、审计日志、数据保留和驻留控制。</td><td>个人研发用 Plus/Pro；团队统一代码审查、云任务和治理时选 Business 起步，强合规选 Enterprise。</td><td><a href="https://learn.chatgpt.com/docs/pricing">Pricing</a>、<a href="https://help.openai.com/en/articles/11481834-chatgpt-rate-card-business-enterpriseedu">Rate Card</a></td></tr>
               <tr><td>Cursor</td><td>Hobby / Pro / Pro+ / Ultra 面向个人 IDE Agent，按 API usage included 和一方模型池区分强度。</td><td>Teams Standard / Premium / Enterprise 面向协作、共享上下文和治理。</td><td>个人版侧重 Tab、Agent、Bugbot、Cloud Agents；Teams 增加集中计费、内部 rules/skills/plugins marketplace、团队共享上下文、用量分析、团队隐私模式、SAML/OIDC；Enterprise 增加 pooled usage、SCIM、访问控制、审计、AI code tracking API。</td><td>单人开发按 Pro/Pro+/Ultra 分层；组织落地建议 Teams Standard 起，重度 Agent 成员用 Premium，强合规走 Enterprise。</td><td><a href="https://cursor.com/docs/models-and-pricing">Models & Pricing</a>、<a href="https://cursor.com/docs/account/teams/pricing">Teams</a></td></tr>
-              <tr><td>Trae</td><td>Free / Lite / Pro / Pro+ / Ultra 为公开主线，按 Basic Usage、Solo 并发和 early access 区分。</td><td>企业方案通过 BytePlus 联系，官网公开页未披露企业额度细节。</td><td>公开信息中，个人版可明确比较 Basic Usage、Solo Agent 并发、Builder/Coder 能力；企业版的席位、SSO、审计、共享额度等需要销售确认。</td><td>个人和小团队可先用 Pro+ / Ultra 试点；企业采购不要只引用个人价格，需要单独向 BytePlus 确认组织治理、数据边界和额度模型。</td><td><a href="https://www.trae.ai/pricing">Pricing</a>、<a href="https://docs.trae.ai/ide/new-plans-and-billing">Plans</a></td></tr>
+              <tr><td>Trae</td><td>Free / Lite / Pro / Pro+ / Ultra 为公开主线，按 Basic Usage、Solo 并发和 early access 区分。</td><td>企业方案通过 BytePlus 入口确认，官网公开页未披露企业额度细节。</td><td>公开信息中，个人版可明确比较 Basic Usage、Solo Agent 并发、Builder/Coder 能力；企业版的席位、SSO、审计、共享额度等需要向官方确认。</td><td>个人和小团队可先用 Pro+ / Ultra 试点；团队试点不要只引用个人价格，需要单独确认组织治理、数据边界和额度模型。</td><td><a href="https://www.trae.ai/pricing">Pricing</a>、<a href="https://docs.trae.ai/ide/new-plans-and-billing">Plans</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -1206,13 +1206,13 @@
           <table class="matrix plan-table">
             <thead><tr><th>产品</th><th>套餐</th><th>公开价格</th><th>Tokens / 额度口径</th><th>能力项差异</th><th>官方依据</th></tr></thead>
             <tbody>
-              <tr><td>华为云码道</td><td>体验版</td><td>¥0</td><td>500万 Tokens/月；知识空间 500MB；Codebase 5,000 文件。</td><td>限量体验 Agent 基础能力：问答、编码、MCP、Rules、Skills；个人体验/企业测试，至高 50 席位。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
-              <tr><td>华为云码道</td><td>基础版</td><td>¥39/席位/月</td><td>2000万 Tokens/席位/月；知识空间 5GB；Codebase 50,000 文件。</td><td>含体验版能力，并增加智能体中心、技能和规则中心；小型企业/团队性价比优选，至高 100 席位。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
-              <tr><td>华为云码道</td><td>专业版</td><td>¥139/席位/月</td><td>6000万 Tokens/席位/月；知识空间 20GB；Codebase 100,000 文件。</td><td>增加操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单、安全隔离代码仓等企业治理能力。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
+              <tr><td>华为云码道</td><td>体验版</td><td>¥0</td><td>500万 Tokens/月；知识空间 500MB；Codebase 5,000 文件。</td><td>限量体验 Agent 基础能力：问答、编码、MCP、Rules、Skills；个人体验/团队测试，至高 50 席位。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道版本与定价</a></td></tr>
+              <tr><td>华为云码道</td><td>基础版</td><td>¥39/席位/月</td><td>2000万 Tokens/席位/月；知识空间 5GB；Codebase 50,000 文件。</td><td>含体验版能力，并增加智能体中心、技能和规则中心；小型团队性价比优选，至高 100 席位。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道版本与定价</a></td></tr>
+              <tr><td>华为云码道</td><td>专业版</td><td>¥139/席位/月</td><td>6000万 Tokens/席位/月；知识空间 20GB；Codebase 100,000 文件。</td><td>增加操作日志、模型管理、企业自定义模型、用量管理、SSO、IP 白名单、安全隔离代码仓等企业治理能力。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道版本与定价</a></td></tr>
               <tr><td>Claude</td><td>Free</td><td>$0</td><td>Limited usage，未公开固定 token 数。</td><td>适合偶发问答和体验；不建议作为团队 AI Coding 主力席位。</td><td><a href="https://support.claude.com/en/articles/11049762-choose-a-claude-plan">Choose a Claude plan</a></td></tr>
               <tr><td>Claude</td><td>Pro</td><td>$20/月，$200/年</td><td>标准用量；Claude、Claude Code、Claude Desktop 共用限制。</td><td>覆盖常规个人开发；Claude Code 可用于终端和 IDE，但长任务会受共享用量影响。</td><td><a href="https://support.claude.com/en/articles/8325606-what-is-the-pro-plan">Pro plan</a>、<a href="https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan">Claude Code with Pro/Max</a></td></tr>
               <tr><td>Claude</td><td>Max 5x</td><td>$100/月</td><td>每会话约 5x Pro 容量；仍是周用量限制，不公开 token 包。</td><td>面向高频 Claude Code 用户；包含优先访问、Claude Code、Cowork 等更高使用能力。</td><td><a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan">Max plan</a></td></tr>
-              <tr><td>Claude</td><td>Max 20x</td><td>$200/月</td><td>每会话约 20x Pro 容量；有跨模型和 Sonnet 相关周限制。</td><td>适合重度 Agent、长上下文和多任务编码；预算上按高强度个人席位处理。</td><td><a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan">Max plan</a></td></tr>
+              <tr><td>Claude</td><td>Max 20x</td><td>$200/月</td><td>每会话约 20x Pro 容量；有跨模型和 Sonnet 相关周限制。</td><td>适合重度 Agent、长上下文和多任务编码；额度规划上按高强度个人席位处理。</td><td><a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan">Max plan</a></td></tr>
 
               <tr><td>Qoder</td><td>Free / 体验版</td><td>$0</td><td>基础模型，用户消息数受限；2 周 Pro Trial 含 300 Credits。</td><td>含有限代码补全、NES 与 BYOK；适合体验，不适合作为正式 Agent 额度。</td><td><a href="https://docs.qoder.com/account/pricing">Qoder Pricing</a></td></tr>
               <tr><td>Qoder</td><td>Pro</td><td>$20/月</td><td>2,000 Credits/月，用于高级模型。</td><td>适合日常开发、补全、轻量 Chat/Agent；含 Quest、Repo Wiki、Knowledge Card。</td><td><a href="https://docs.qoder.com/account/pricing">Qoder Pricing</a>、<a href="https://docs.qoder.com/Credits">Qoder Credits</a></td></tr>
@@ -1244,34 +1244,34 @@
           <table class="matrix plan-table">
             <thead><tr><th>产品</th><th>套餐</th><th>公开价格</th><th>Tokens / 额度口径</th><th>能力项差异</th><th>官方依据</th></tr></thead>
             <tbody>
-              <tr><td>华为云码道</td><td>基础版 / 专业版</td><td>¥39 或 ¥139/席位/月</td><td>2000万 或 6000万 Tokens/席位/月。</td><td>基础版适合小团队；专业版适合需要 SSO、操作日志、模型管理、自定义模型、用量管理和 IP 白名单的企业团队。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道选型与定价</a></td></tr>
+              <tr><td>华为云码道</td><td>基础版 / 专业版</td><td>¥39 或 ¥139/席位/月</td><td>2000万 或 6000万 Tokens/席位/月。</td><td>基础版适合小团队；专业版适合需要 SSO、操作日志、模型管理、自定义模型、用量管理和 IP 白名单的企业团队。</td><td><a href="https://codearts.huaweicloud.com/pricing.html">码道版本与定价</a></td></tr>
               <tr><td>Claude</td><td>Team Standard</td><td>$25/成员/月；年付 $20/成员/月</td><td>每会话约 1.25x Pro；周用量限制。</td><td>2-150 席；含 Claude Code、团队管理、SSO、域捕获、JIT、RBAC、连接器和 spend controls。</td><td><a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">Claude Team plan</a></td></tr>
               <tr><td>Claude</td><td>Team Premium</td><td>$125/成员/月；年付 $100/成员/月</td><td>每会话约 6.25x Pro；有跨模型与 Sonnet 周限制。</td><td>适合重度研发团队成员；比 Standard 明显提升用量，并保留团队治理能力。</td><td><a href="https://support.claude.com/en/articles/9266767-what-is-the-team-plan">Claude Team plan</a></td></tr>
-              <tr><td>Claude</td><td>Enterprise</td><td>联系销售</td><td>按企业合约。</td><td>面向 150+ 席或更强合规要求；Claude Code 在新 Enterprise/self-serve 席位中可用，旧计划按席位形态区分。</td><td><a href="https://support.claude.com/en/articles/11845131-use-claude-code-with-your-team-or-enterprise-plan">Claude Code Team/Enterprise</a></td></tr>
+              <tr><td>Claude</td><td>Enterprise</td><td>官方未公开，需确认</td><td>按企业合约。</td><td>面向 150+ 席或更强合规要求；Claude Code 在新 Enterprise/self-serve 席位中可用，旧计划按席位形态区分。</td><td><a href="https://support.claude.com/en/articles/11845131-use-claude-code-with-your-team-or-enterprise-plan">Claude Code Team/Enterprise</a></td></tr>
 
               <tr><td>Qoder</td><td>Teams</td><td>$40/席位/月</td><td>每席 3,000 Credits/月；不可跨成员转移，月末清零。</td><td>适合中小团队；含 Desktop、QoderWork、QoderWake、CLI、Cloud Agents、Mobile、SSO、角色、组、资源统计、隐私模式等。</td><td><a href="https://docs.qoder.com/account/enterprise/pricing">Qoder Enterprise Pricing</a></td></tr>
               <tr><td>Qoder</td><td>Enterprise</td><td>$20/席位/月</td><td>席位不含 AI compute quota；Credits 通过 Shared Add-on Credits 另购。</td><td>更强调集中分发、模型路由、内容安全策略、审计日志、OpenAPI Extended APIs、插件/Skill 分发与企业治理。</td><td><a href="https://docs.qoder.com/account/enterprise/pricing">Qoder Enterprise Pricing</a></td></tr>
-              <tr><td>Qoder</td><td>Shared Add-on Credits</td><td>$40 / 2,000 Credits</td><td>组织共享池；有效期 3 个月。</td><td>适合企业做统一预算池；消耗顺序为月度席位额度、个人附加 Credits、组织共享 Credits。</td><td><a href="https://docs.qoder.com/account/enterprise/pricing">Qoder Shared Add-on Credits</a></td></tr>
+              <tr><td>Qoder</td><td>Shared Add-on Credits</td><td>$40 / 2,000 Credits</td><td>组织共享池；有效期 3 个月。</td><td>适合团队做统一额度池；消耗顺序为月度席位额度、个人附加 Credits、组织共享 Credits。</td><td><a href="https://docs.qoder.com/account/enterprise/pricing">Qoder Shared Add-on Credits</a></td></tr>
 
               <tr><td>Codex</td><td>Business</td><td>$25/用户/月；年付 $20/用户/月</td><td>与 Work mode/Codex credits 和 usage limits 绑定；企业可扩展 credit plans。</td><td>包含更大 VM、安全 workspace、SAML SSO、默认不训练；适合团队统一结算与云端任务。</td><td><a href="https://learn.chatgpt.com/docs/pricing">Codex Pricing</a>、<a href="https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan">Codex with ChatGPT plan</a></td></tr>
-              <tr><td>Codex</td><td>Enterprise / Edu</td><td>联系销售</td><td>按企业 credits / rate card / 合约。</td><td>增加优先处理、SCIM、EKM、分析、RBAC、审计日志、数据保留和数据驻留控制。</td><td><a href="https://learn.chatgpt.com/docs/pricing">Codex Pricing</a>、<a href="https://help.openai.com/en/articles/11481834-chatgpt-rate-card-business-enterpriseedu">ChatGPT Rate Card</a></td></tr>
+              <tr><td>Codex</td><td>Enterprise / Edu</td><td>官方未公开，需确认</td><td>按企业 credits / rate card / 合约。</td><td>增加优先处理、SCIM、EKM、分析、RBAC、审计日志、数据保留和数据驻留控制。</td><td><a href="https://learn.chatgpt.com/docs/pricing">Codex Pricing</a>、<a href="https://help.openai.com/en/articles/11481834-chatgpt-rate-card-business-enterpriseedu">ChatGPT Rate Card</a></td></tr>
 
               <tr><td>Cursor</td><td>Teams Standard</td><td>$40/用户/月</td><td>按 paid seats 和 usage；每席含月度用量，可开 on-demand usage。</td><td>包含集中计费管理、内部 rules/skills/plugins marketplace、Bugbot、Cloud Agents、Automations、usage analytics、团队隐私模式、SAML/OIDC SSO。</td><td><a href="https://cursor.com/docs/account/teams/pricing">Cursor Teams Pricing</a></td></tr>
               <tr><td>Cursor</td><td>Teams Premium</td><td>$120/用户/月</td><td>Agent 限制约为 Standard 的 5x。</td><td>面向团队中的高频 Agent 用户；第三方 API 模型请求叠加 Cursor Token Rate。</td><td><a href="https://cursor.com/docs/account/teams/pricing">Cursor Teams Pricing</a>、<a href="https://cursor.com/docs/models-and-pricing">Models & Pricing</a></td></tr>
-              <tr><td>Cursor</td><td>Enterprise</td><td>联系销售</td><td>支持 pooled usage。</td><td>增加 invoice/PO、SCIM、仓库/模型/MCP 访问控制、auto-run/browser/network controls、审计日志、service accounts、AI code tracking API、优先支持。</td><td><a href="https://cursor.com/pricing">Cursor Pricing</a></td></tr>
+              <tr><td>Cursor</td><td>Enterprise</td><td>官方未公开，需确认</td><td>支持 pooled usage。</td><td>增加 invoice/PO、SCIM、仓库/模型/MCP 访问控制、auto-run/browser/network controls、审计日志、service accounts、AI code tracking API、优先支持。</td><td><a href="https://cursor.com/pricing">Cursor Pricing</a></td></tr>
 
-              <tr><td>Trae</td><td>Enterprise</td><td>联系 BytePlus</td><td>官网自助页未公开企业 token/额度表。</td><td>当前公开价格页主要展示个人五档；企业方案通过 BytePlus 入口联系。</td><td><a href="https://www.trae.ai/pricing">Trae Pricing</a></td></tr>
-              <tr><td>Trae</td><td>On-demand Usage</td><td>按超额 token 成本结算</td><td>月度 Basic Usage / Bonus Usage 耗尽后，Lite/Pro/Pro+/Ultra 可开启；按模型官方 API 价折算。</td><td>每累计 $3 触发一次付款；适合防止任务中断，但需要团队侧设置预算提醒。</td><td><a href="https://docs.trae.ai/ide/on-demand-usage">Trae On-demand Usage</a></td></tr>
+              <tr><td>Trae</td><td>Enterprise</td><td>官方未公开，需确认</td><td>官网自助页未公开企业 token/额度表。</td><td>当前公开价格页主要展示个人五档；企业方案需要通过 BytePlus 入口进一步确认。</td><td><a href="https://www.trae.ai/pricing">Trae Pricing</a></td></tr>
+              <tr><td>Trae</td><td>On-demand Usage</td><td>按超额 token 成本结算</td><td>月度 Basic Usage / Bonus Usage 耗尽后，Lite/Pro/Pro+/Ultra 可开启；按模型官方 API 价折算。</td><td>每累计 $3 触发一次付款；适合防止任务中断，但需要团队侧设置用量提醒。</td><td><a href="https://docs.trae.ai/ide/on-demand-usage">Trae On-demand Usage</a></td></tr>
             </tbody>
           </table>
         </div>
 
-        <h3 class="section-title">采购与赋能判断</h3>
+        <h3 class="section-title">团队学习与试点判断</h3>
         <div class="table-scroll">
           <table class="matrix">
             <thead><tr><th>判断问题</th><th>更优选择</th><th>理由</th></tr></thead>
             <tbody>
-              <tr><td>需要固定 token 包、中文企业预算清晰</td><td>华为云码道</td><td>套餐直接公开 Tokens、知识空间、Codebase 文件数和治理能力，适合做预算与配额分配。</td></tr>
+              <tr><td>需要固定 token 包、中文团队额度清晰</td><td>华为云码道</td><td>套餐直接公开 Tokens、知识空间、Codebase 文件数和治理能力，适合做额度和配额分配。</td></tr>
               <tr><td>研发个人重度 Agent、长任务、Quest/知识资产</td><td>Qoder Pro+ / Ultra，Cursor Pro+ / Ultra，Claude Max</td><td>Qoder 给 Credits 和知识资产，Cursor 给 API usage + Cloud/Review，Claude Max 给更高会话用量。</td></tr>
               <tr><td>代码审查、安全、CLI/云端工作区一体化</td><td>Codex Plus/Pro/Business，Cursor Teams，Claude Team</td><td>这几类产品在 review、cloud task、权限/审计和终端/IDE 协同方面证据更强。</td></tr>
               <tr><td>设计稿到代码、前端预览、Solo 开发闭环</td><td>Trae Pro+ / Ultra，Cursor Pro+</td><td>Trae 的 Figma to Code、SOLO、浏览器预览和 Dollar Usage 模型适合前端产品化试点。</td></tr>
@@ -1297,7 +1297,7 @@
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>把代码、文档、设计稿、历史对话、规范和安全上下文组织成可检索、可推理的关系网络。官网中 Qoder 对 Knowledge Engine、QMind、Repo Wiki、Knowledge Cards 的描述最接近“知识图谱”。</p></div>
                           <div class="box"><h3>怎么用</h3><p>先接入仓库和文档源，生成 Repo Wiki 与知识卡片；再让 Agent 在需求分析、代码修改和审查时引用这些知识。Cursor/Trae 主要通过代码库索引，Codex 通过 AGENTS.md、记忆和安全威胁模型补充上下文。</p></div>
-                          <div class="box"><h3>价值</h3><p>减少新人理解成本，避免 Agent 反复问同样上下文；对 SA 场景，能把架构、约束、接口、风险和竞品信息沉淀为可复用资产。</p></div>
+                          <div class="box"><h3>价值</h3><p>减少新人理解成本，避免 Agent 反复问同样上下文；对 SA 场景，能把架构、约束、接口、风险和产品对比信息沉淀为可复用资产。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>把“系统架构、关键模块、接口边界、部署拓扑、已知坑、审查规则”作为首批知识节点；每次项目复盘后新增知识卡片，而不是只保存在聊天记录里。</div>
                         <div class="sources"><a href="https://docs.qoder.com/account/enterprise/knowledge-base">Qoder Knowledge Engine</a><a href="https://docs.qoder.com/account/enterprise/qmind">Qoder QMind</a><a href="https://cursor.com/docs/agent/tools/search">Cursor Search & Index</a><a href="https://docs.trae.ai/ide/codebase-indexing">Trae Codebase Indexing</a></div>
@@ -1367,7 +1367,7 @@
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>把一段知识压缩成可复用卡片：定义、关键点、来源引用、关系、适用场景和注意事项。Qoder QMind/Knowledge Engine 对 Knowledge Cards 描述最明确。</p></div>
                           <div class="box"><h3>怎么用</h3><p>把官网文档、内部方案、代码理解、故障复盘编译成卡片；让 Agent 在需求分析、培训和审查中引用卡片。</p></div>
-                          <div class="box"><h3>价值</h3><p>比长文档更容易复用，也比聊天记忆更可审计。适合 SA 知识库、竞品能力卡、产品规格卡和安全规则卡。</p></div>
+                          <div class="box"><h3>价值</h3><p>比长文档更容易复用，也比聊天记忆更可审计。适合 SA 知识库、产品对比能力卡、产品规格卡和安全规则卡。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>每张卡片固定字段：主题、定义、使用场景、限制、来源、更新时间、适用产品/版本。</div>
                         <div class="sources"><a href="https://docs.qoder.com/account/enterprise/qmind">Qoder QMind Knowledge Cards</a><a href="https://docs.qoder.com/account/enterprise/knowledge-base">Qoder Knowledge Engine</a></div>
@@ -1442,7 +1442,7 @@
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>把复杂任务拆成可执行步骤、条件分支、并行代理和验证节点。Claude 与 Qoder 都有 Dynamic Workflows；Trae 的 SOLO、Qoder Quest、Cursor Agent、Codex Plan/Cloud 属于工作流化体验。</p></div>
                           <div class="box"><h3>怎么用</h3><p>将“调研、设计、实现、测试、审查、总结”固化为模板；可让主 Agent 生成或调用脚本，再用子 Agent 并行完成检索、实现和验证。</p></div>
-                          <div class="box"><h3>价值</h3><p>把一次性提示词变成可重复生产流程，适合批量迁移、代码审计、竞品抓取、自动化周报和大规模重构。</p></div>
+                          <div class="box"><h3>价值</h3><p>把一次性提示词变成可重复生产流程，适合批量迁移、代码审计、产品资料抓取、自动化周报和大规模重构。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>优先沉淀 3 类 Workflow：PR 审查、需求到代码、技术调研。每个流程都要有输入清单、质量门禁、失败回退和输出格式。</div>
                         <div class="sources"><a href="https://code.claude.com/docs/en/workflows">Claude Dynamic Workflows</a><a href="https://docs.qoder.com/en/cli/workflows">Qoder CLI Workflows</a><a href="https://docs.qoder.com/user-guide/quest/overview">Qoder Quest</a><a href="https://docs.trae.ai/ide/solo-mode">Trae SOLO</a></div>
@@ -1604,7 +1604,7 @@
                           <div class="box"><h3>怎么用</h3><p>定义触发器、任务提示词、仓库范围、工具权限、输出渠道和失败处理。可用于每日摘要、夜间补测试、漏洞巡检。</p></div>
                           <div class="box"><h3>价值</h3><p>把 AI 从“人想起来才用”变成稳定后台流程，提升持续审查和维护能力。</p></div>
                         </div>
-                        <div class="practice"><strong>团队落地：</strong>自动任务的提示词要像交接单，写清范围、验收标准和失败时如何汇报；不要给定时任务无限权限。</div>
+                        <div class="practice"><strong>团队落地：</strong>自动任务的提示词要像交接单，写清范围、验收标准和失败时如何反馈；不要给定时任务无限权限。</div>
                         <div class="sources"><a href="https://cursor.com/docs/cloud-agent/automations.md">Cursor Automations</a><a href="https://docs.qoder.com/user-guide/quest/scheduled-tasks.md">Qoder Scheduled Tasks</a><a href="https://code.claude.com/docs/en/scheduled-tasks">Claude Scheduled Tasks</a><a href="https://code.claude.com/docs/en/routines">Claude Routines</a></div>
                       </div>
                       <div class="diagram"><svg viewBox="0 0 360 220"><rect x="42" y="36" width="276" height="40" rx="8" fill="#eaf1ff"/><text x="180" y="61" text-anchor="middle" font-size="13">触发器：cron / PR / Slack</text><path d="M180 76 V116" stroke="#52616f" stroke-width="2"/><rect x="78" y="116" width="204" height="40" rx="8" fill="#e7f7f1"/><text x="180" y="141" text-anchor="middle" font-size="13">Cloud Agent 执行</text><path d="M180 156 V186" stroke="#52616f" stroke-width="2"/><text x="180" y="205" text-anchor="middle" font-size="12" fill="#5d6976">报告 / PR / 消息通知</text></svg></div>
@@ -1618,7 +1618,7 @@
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>先澄清需求并生成结构化 Spec，再让 Agent 按设计方案、任务拆解和验收标准执行。</p></div>
                           <div class="box"><h3>怎么用</h3><p>输入需求后先让 Agent 提问、生成 Spec、列出验收标准；人工确认后再 Build、Schedule 或进入 Goal 模式。</p></div>
-                          <div class="box"><h3>价值</h3><p>减少需求理解偏差，适合中大型功能、跨模块修改、客户交付和需要审计决策的项目。</p></div>
+                          <div class="box"><h3>价值</h3><p>减少需求理解偏差，适合中大型功能、跨模块修改、内部交付和需要审计决策的项目。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>不要让 Agent 直接写复杂功能。先产出 Spec，确认范围、非目标、边界和验收标准。</div>
                         <div class="sources"><a href="https://docs.qoder.com/user-guide/quest/spec-driven.md">Qoder Spec-driven</a><a href="https://docs.trae.ai/ide/built-in-agent">Trae Agent</a><a href="https://cursor.com/docs/agent/overview">Cursor Agent</a><a href="https://learn.chatgpt.com/guides/best-practices">Codex Plan Mode</a></div>
@@ -1652,7 +1652,7 @@
                           <div class="box"><h3>怎么用</h3><p>通过 Agent SDK、Headless CLI、Cloud Agent API、JetBrains/VS Code 扩展或企业平台集成，把任务创建、事件流和结果接入内部系统。</p></div>
                           <div class="box"><h3>价值</h3><p>平台团队可把 Agent 变成研发平台能力：统一权限、审计、成本、触发器和知识库，而不是每个人各用各的工具。</p></div>
                         </div>
-                        <div class="practice"><strong>团队落地：</strong>先定义统一任务接口：输入、权限、环境、输出、状态、成本和审计字段，再接入具体厂商 SDK/API。</div>
+                        <div class="practice"><strong>团队落地：</strong>先定义统一任务接口：输入、权限、环境、输出、状态、成本和审计字段，再接入具体产品 SDK/API。</div>
                         <div class="sources"><a href="https://code.claude.com/docs/en/agent-sdk/overview">Claude Agent SDK</a><a href="https://cursor.com/docs/cli/headless">Cursor Headless CLI</a><a href="https://cursor.com/docs/integrations/jetbrains">Cursor JetBrains</a><a href="https://docs.qoder.com/cloud-agents/api/overview.md">Qoder Cloud API</a></div>
                       </div>
                       <div class="diagram"><svg viewBox="0 0 360 220"><rect x="40" y="34" width="280" height="40" rx="8" fill="#eaf1ff"/><text x="180" y="59" text-anchor="middle" font-size="13">企业研发平台</text><rect x="48" y="126" width="76" height="38" rx="8" fill="#e7f7f1"/><text x="86" y="150" text-anchor="middle" font-size="12">SDK</text><rect x="142" y="126" width="76" height="38" rx="8" fill="#fff3df"/><text x="180" y="150" text-anchor="middle" font-size="12">API</text><rect x="236" y="126" width="76" height="38" rx="8" fill="#f5f3ff"/><text x="274" y="150" text-anchor="middle" font-size="12">IDE</text><path d="M180 74 V126" stroke="#52616f" stroke-width="2"/></svg></div>
@@ -1674,7 +1674,7 @@
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>把复杂任务委派给多个专业代理：安全审查、测试生成、架构分析、前端实现、文档整理等。每个子代理通常有自己的上下文、工具权限和角色说明。</p></div>
                           <div class="box"><h3>怎么用</h3><p>Claude 有 Subagents 和 Agent Teams；Codex 有 subagents/custom agents；Cursor 有内置与自定义 Subagents；Qoder Managed Agents 可由 coordinator 管理 child agents；Trae Subagents 用 Markdown 定义。</p></div>
-                          <div class="box"><h3>价值</h3><p>并行提高吞吐，专业角色提升质量；尤其适合大仓库调研、安全审查、迁移评估、竞品分析和多模块开发。</p></div>
+                          <div class="box"><h3>价值</h3><p>并行提高吞吐，专业角色提升质量；尤其适合大仓库调研、安全审查、迁移评估、产品对比分析和多模块开发。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>先建 5 个基础子代理：代码审查、安全审计、测试生成、文档抽取、架构分析。每个代理只给必要工具权限。</div>
                         <div class="sources"><a href="https://code.claude.com/docs/en/sub-agents">Claude Subagents</a><a href="https://code.claude.com/docs/en/agent-teams">Claude Agent Teams</a><a href="https://learn.chatgpt.com/docs/agent-configuration/subagents.md">Codex Subagents</a><a href="https://cursor.com/docs/subagents">Cursor Subagents</a><a href="https://docs.qoder.com/cloud-agents/managed-agents">Qoder Managed Agents</a><a href="https://docs.trae.ai/ide/subagents">Trae Subagents</a></div>
@@ -1776,8 +1776,8 @@
                     <div class="topic-body">
                       <div>
                         <div class="explain">
-                          <div class="box"><h3>是什么</h3><p>AI Coding 的成本通常由席位、模型用量、云端 Agent、企业治理能力和额外 credits 组成。不同厂商对“Pro/Team/Enterprise”的权益划分差异很大。</p></div>
-                          <div class="box"><h3>怎么用</h3><p>采购前用 3 个维度评估：高频个人开发、团队协作治理、云端自动化。Cursor/Qoder 官网给出清晰价格档位；Codex 随 ChatGPT/Codex 计划和 API 计费；Trae 有 Free/Lite/Pro/Pro+/Ultra；Claude 以官方计划与 Code 功能可用性为准。</p></div>
+                          <div class="box"><h3>是什么</h3><p>AI Coding 的成本通常由席位、模型用量、云端 Agent、企业治理能力和额外 credits 组成。不同产品对“Pro/Team/Enterprise”的权益划分差异很大。</p></div>
+                          <div class="box"><h3>怎么用</h3><p>试点前用 3 个维度评估：高频个人开发、团队协作治理、云端自动化。Cursor/Qoder 官网给出清晰套餐档位；Codex 随 ChatGPT/Codex 计划和 API 计费；Trae 有 Free/Lite/Pro/Pro+/Ultra；Claude 以官方计划与 Code 功能可用性为准。</p></div>
                           <div class="box"><h3>价值</h3><p>避免只看单席价格。真正成本取决于是否启用 cloud agent、长上下文、并行 subagent、审查自动化和企业审计。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>先按角色分层：核心研发给高配，普通成员给基础 IDE 辅助，安全/平台团队给云端审查和治理能力；每月复盘 credits 消耗。</div>
@@ -1858,7 +1858,7 @@
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>说明代码、提示词、索引、云端仓库副本、模型请求和日志如何处理、存储、训练、删除和审计。</p></div>
                           <div class="box"><h3>怎么用</h3><p>开启 Privacy Mode，配置企业策略、模型访问、数据驻留、SSO、审计日志和云端 Agent 使用边界。</p></div>
-                          <div class="box"><h3>价值</h3><p>让 AI Coding 能通过企业安全评审。没有数据治理，工具很难进入客户现场或核心研发流程。</p></div>
+                          <div class="box"><h3>价值</h3><p>让 AI Coding 能通过企业安全评审。没有数据治理，工具很难进入核心研发流程或受控环境。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>把数据流画清楚：本地索引、模型请求、云端执行、日志、截图、代码副本分别去哪里、保存多久。</div>
                         <div class="sources"><a href="https://cursor.com/docs/enterprise/privacy-and-data-governance.md">Cursor Governance</a><a href="https://docs.trae.ai/ide/privacy-mode">Trae Privacy Mode</a><a href="https://docs.qoder.com/account/enterprise/pricing">Qoder Enterprise Controls</a><a href="https://code.claude.com/docs/en/security">Claude Security</a></div>
@@ -1905,10 +1905,10 @@
                       <div>
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>根据任务难度、速度、成本、上下文长度、隐私和企业策略选择模型，或接入自己的 API key。</p></div>
-                          <div class="box"><h3>怎么用</h3><p>简单补全用快模型，复杂架构和安全审查用高推理模型；企业设置模型白名单、路由策略和预算上限。</p></div>
+                          <div class="box"><h3>怎么用</h3><p>简单补全用快模型，复杂架构和安全审查用高推理模型；企业设置模型白名单、路由策略和用量上限。</p></div>
                           <div class="box"><h3>价值</h3><p>模型选择直接影响成本、质量和延迟。不是所有任务都需要最强模型，也不是所有模型都适合敏感代码。</p></div>
                         </div>
-                        <div class="practice"><strong>团队落地：</strong>给任务分级：L1 补全、L2 小修、L3 多文件、L4 安全/架构；每级绑定推荐模型和预算。</div>
+                        <div class="practice"><strong>团队落地：</strong>给任务分级：L1 补全、L2 小修、L3 多文件、L4 安全/架构；每级绑定推荐模型和用量上限。</div>
                         <div class="sources"><a href="https://learn.chatgpt.com/docs/models">Codex Models</a><a href="https://cursor.com/docs/models-and-pricing">Cursor Models</a><a href="https://code.claude.com/docs/en/model-config">Claude Model Config</a><a href="https://docs.trae.ai/ide/models">Trae Models</a></div>
                       </div>
                       <div class="diagram"><svg viewBox="0 0 360 220"><rect x="36" y="42" width="86" height="38" rx="8" fill="#e7f7f1"/><text x="79" y="66" text-anchor="middle" font-size="12">快</text><rect x="137" y="42" width="86" height="38" rx="8" fill="#fff3df"/><text x="180" y="66" text-anchor="middle" font-size="12">准</text><rect x="238" y="42" width="86" height="38" rx="8" fill="#fff0ef"/><text x="281" y="66" text-anchor="middle" font-size="12">贵</text><rect x="76" y="136" width="208" height="40" rx="8" fill="#f8fafc" stroke="#ccd6df"/><text x="180" y="161" text-anchor="middle" font-size="13">任务分级 -> 模型路由</text></svg></div>
@@ -2055,7 +2055,7 @@
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>把 Agent 的输出从“聊天文本”升级为可查看、可分享、可继续编辑的交付物，如网页、报告、图表、代码补丁、审查摘要、截图、视频或 Canvas。</p></div>
                           <div class="box"><h3>怎么用</h3><p>Claude Artifacts 可发布交互网页；Cursor Canvas 用于报告、审计和工作流；Qoder Quest 有 artifact review；Codex 生成本地文件和审查结果；Trae Review 会生成摘要与流程图。</p></div>
-                          <div class="box"><h3>价值</h3><p>让团队从“看一段回答”变成“审一个结果”。适合培训材料、方案草案、代码审查、可视化复盘和客户演示。</p></div>
+                          <div class="box"><h3>价值</h3><p>让团队从“看一段回答”变成“审一个结果”。适合培训材料、方案草案、代码审查、可视化复盘和内部演示。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>统一要求 Agent 输出“结论 + 证据 + 可交付文件 + 源链接”，不要只接受一段泛化回答。</div>
                         <div class="sources"><a href="https://code.claude.com/docs/en/artifacts">Claude Artifacts</a><a href="https://cursor.com/docs/agent/tools/canvas">Cursor Canvas</a><a href="https://docs.qoder.com/user-guide/quest/overview">Qoder Quest Artifacts</a><a href="https://docs.trae.ai/ide/agent-powered-code-review">Trae Agent Review</a></div>
@@ -2093,7 +2093,7 @@
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>Superpowers 更像一套外部方法论或能力包概念：把提示词、规则、脚本、模板、检查清单和工具调用打包，让 Agent 获得专项能力。</p></div>
                           <div class="box"><h3>怎么用</h3><p>在 Claude/Codex/Trae/Qoder 中可用 Skills/Plugins；在 Cursor 中可用 Rules、Subagents、Canvas workflow；配合 Hooks 和 Workflows 形成可复用能力包。</p></div>
-                          <div class="box"><h3>价值</h3><p>把个人经验封装为可分发能力，降低团队学习成本；适合“安全审查包、官网抓取包、前端验收包、竞品分析包”。</p></div>
+                          <div class="box"><h3>价值</h3><p>把个人经验封装为可分发能力，降低团队学习成本；适合“安全审查包、官网抓取包、前端验收包、产品对比包”。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>不要先追求复杂框架。先把一个成熟任务封装为 Skill：说明适用场景、输入、流程、输出和校验标准。</div>
                         <div class="sources"><a href="https://docs.trae.ai/ide/skills">Trae Skills</a><a href="https://learn.chatgpt.com/guides/best-practices">Codex Best Practices</a><a href="https://code.claude.com/docs/en/features-overview">Claude Features Overview</a><a href="https://cursor.com/docs/agent/tools/canvas">Cursor Canvas</a></div>
@@ -2103,7 +2103,7 @@
                   </article>
 
           <article id="t47" class="topic" data-tags="design pattern workflow subagent hooks memory agent codearts">
-                    <div class="topic-head"><h2>47. 设计模式</h2><div class="tags"><span class="tag partial">组织实践，不是单一厂商功能</span></div></div>
+                    <div class="topic-head"><h2>47. 设计模式</h2><div class="tags"><span class="tag partial">组织实践，不是单一产品功能</span></div></div>
                     <div class="topic-body">
                       <div>
                         <div class="explain">
@@ -2125,7 +2125,7 @@
                         <div class="explain">
                           <div class="box"><h3>是什么</h3><p>画布是比聊天更适合承载结构化内容的工作区，可放报告、图表、仪表盘、审计结果、流程图和可交互页面。</p></div>
                           <div class="box"><h3>怎么用</h3><p>Cursor Canvas 用于分析、审计、报告和可复用工作流；Qoder 有 Canvas 扩展和 Quest artifact；Claude Artifacts 可生成交互网页；Codex/Trae 可通过本地 HTML、报告和工具面板实现类似交付。</p></div>
-                          <div class="box"><h3>价值</h3><p>让 AI 输出更适合团队消费和二次编辑，特别适合培训、方案评审、架构解释和客户汇报。</p></div>
+                          <div class="box"><h3>价值</h3><p>让 AI 输出更适合团队消费和二次编辑，特别适合培训、方案评审、架构解释和内部汇报。</p></div>
                         </div>
                         <div class="practice"><strong>团队落地：</strong>把画布当作“结论承载面”，要求每个画布保留来源链接、更新时间、适用版本和待确认假设。</div>
                         <div class="sources"><a href="https://cursor.com/docs/agent/tools/canvas">Cursor Canvas</a><a href="https://docs.qoder.com/extensions/canvas.md">Qoder Canvas</a><a href="https://code.claude.com/docs/en/artifacts">Claude Artifacts</a><a href="https://docs.trae.ai/ide/tool-panels">Trae Tool Panels</a></div>
@@ -2171,12 +2171,12 @@
 
       <section class="panel" id="qoder-blog-digests">
         <h2 class="section-title">Qoder 技术博客补充</h2>
-        <p class="lead">本节基于 Qoder 官方两篇技术博客做二次整理，只保留可落地的方法、工程约束和评估口径。博客中的厂商自述数据适合作为案例线索，不直接作为采购结论。</p>
+        <p class="lead">本节基于 Qoder 官方两篇技术博客做二次整理，只保留可落地的方法、工程约束和评估口径。博客中的官方案例数据适合作为方法线索，不直接作为团队落地结论。</p>
         <div class="table-scroll">
           <table class="matrix">
             <thead><tr><th>官方材料</th><th>可吸收干货</th><th>团队应用位置</th><th>落地注意</th></tr></thead>
             <tbody>
-              <tr><td>自迭代知识引擎</td><td>Knowledge Card 给 Agent 用，Repo Wiki 给人用；通过代码提交和对话沉淀持续更新知识。</td><td>知识图谱、Repo Wiki、知识卡片、代码库索引、记忆。</td><td>供应商横评结果需在自有仓库复测，不应只看演示仓库。</td></tr>
+              <tr><td>自迭代知识引擎</td><td>Knowledge Card 给 Agent 用，Repo Wiki 给人用；通过代码提交和对话沉淀持续更新知识。</td><td>知识图谱、Repo Wiki、知识卡片、代码库索引、记忆。</td><td>官方案例结论需在自有仓库复测，不应只看演示仓库。</td></tr>
               <tr><td>巨型应用重写案例</td><td>先建认知基础设施和验证基础设施，再让多 Agent 并行执行和自动修复。</td><td>Workflow、Quest、Sub Agent、Review、Computer Use、调试、CI/CD。</td><td>适合迁移和重构试点，不适合无边界的一次性全量重写。</td></tr>
             </tbody>
           </table>
@@ -2225,7 +2225,7 @@
             </div>
             <figure>
               <img src="https://img.alicdn.com/imgextra/i2/O1CN014hDvcv26UczXCARe2_!!6000000007665-0-tps-1832-838.jpg" alt="Qoder V1 mega rewrite case" />
-              <figcaption>官方图：Qoder V1 大规模重写案例，适合作为方法论样例而非直接采购证据。</figcaption>
+              <figcaption>官方图：Qoder V1 大规模重写案例，适合作为方法论样例而非直接团队落地证据。</figcaption>
             </figure>
             <div class="table-scroll">
               <table class="matrix">
@@ -2248,7 +2248,7 @@
         <h2 class="section-title">官网来源索引</h2>
         <ul class="source-grid">
           <li><a href="https://codearts.huaweicloud.com/">华为云码道官网</a></li>
-          <li><a href="https://codearts.huaweicloud.com/pricing.html">华为云码道选型与定价</a></li>
+          <li><a href="https://codearts.huaweicloud.com/pricing.html">华为云码道版本与定价</a></li>
           <li><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0001.html">华为云码道产品介绍</a></li>
           <li><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0004.html">华为云码道产品功能</a></li>
           <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0005.html">华为云码道智能体对话</a></li>
