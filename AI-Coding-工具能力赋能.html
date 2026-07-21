@@ -707,6 +707,12 @@
       background: #fff;
       color: var(--brand);
     }
+    .sources a.source-codearts {
+      border-color: var(--frame-strong);
+      background: #f7f3f3;
+      color: var(--brand-dark);
+      font-weight: 700;
+    }
     .tags {
       display: flex;
       gap: 6px;
@@ -927,7 +933,7 @@
     <div class="topbar">
       <div>
         <h1>AI Coding 工具能力赋能</h1>
-        <p class="subtitle">华为云码道（CodeArts） / Claude Code / Qoder / OpenAI Codex / Cursor / Trae：能力框架、产品差异、套餐认知；官网资料复核日期：2026-07-18</p>
+        <p class="subtitle">华为云码道（CodeArts） / Claude Code / Qoder / OpenAI Codex / Cursor / Trae：能力框架、产品差异、套餐认知；官网资料复核日期：2026-07-21</p>
       </div>
       <div class="controls">
         <input id="search" class="search" type="search" placeholder="搜索主题、工具或关键词" />
@@ -2255,6 +2261,13 @@
           <li><a href="https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0004.html">华为云码道产品功能</a></li>
           <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0005.html">华为云码道智能体对话</a></li>
           <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0001.html">华为云码道代码库索引</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0009.html">华为云码道上下文与上下文压缩</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0019.html">华为云码道规则</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0013.html">华为云码道知识库</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0003.html">华为云码道 LSP</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0007.html">华为云码道代码续写</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0008.html">华为云码道智能问答</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-plugin/codeartsagent_plugin_0005.html">华为云码道单元测试</a></li>
           <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0010.html">华为云码道 MCP</a></li>
           <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0024.html">华为云码道 Skills</a></li>
           <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0036.html">华为云码道 Hooks</a></li>
@@ -2264,6 +2277,10 @@
           <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0034.html">华为云码道多会话管理</a></li>
           <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0045.html">华为云码道沙箱</a></li>
           <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0052.html">华为云码道内置智能体</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0023.html">华为云码道 Diff 视图</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0021.html">华为云码道页面预览</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0026.html">华为云码道多模态输入</a></li>
+          <li><a href="https://support.huaweicloud.com/usermanual-space/codeartsagent_space_0002.html">华为云码道 Agent Space 多会话并行</a></li>
 
           <li><a href="https://code.claude.com/docs/en/overview">Claude Code Overview</a></li>
           <li><a href="https://code.claude.com/docs/en/mcp">Claude MCP</a></li>
@@ -2393,6 +2410,95 @@
     const cards = Array.from(document.querySelectorAll('.topic'));
     const topicGroups = Array.from(document.querySelectorAll('.topic-group'));
     let activeFilter = 'all';
+
+    const codeArtsDocs = {
+      product: 'https://support.huaweicloud.com/productdesc-codeartssnap/codeartsdoer_pd_0004.html',
+      agent: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0005.html',
+      completion: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0007.html',
+      context: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0009.html',
+      mcp: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0010.html',
+      knowledge: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0013.html',
+      rules: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0019.html',
+      preview: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0021.html',
+      diff: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0023.html',
+      skills: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0024.html',
+      multimodal: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0026.html',
+      multisession: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0034.html',
+      hooks: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0036.html',
+      commands: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0038.html',
+      memory: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0039.html',
+      checkpoint: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0040.html',
+      sandbox: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0045.html',
+      codebase: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0001.html',
+      lsp: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0003.html',
+      agentteam: 'https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0052.html',
+      agentspace: 'https://support.huaweicloud.com/usermanual-space/codeartsagent_space_0002.html',
+      pricing: 'https://codearts.huaweicloud.com/pricing.html'
+    };
+
+    const codeArtsTopicSources = {
+      t1: ['codebase', '码道：Codebase 图谱检索'],
+      t2: ['rules', '码道：Rules 规则'],
+      t3: ['memory', '码道：记忆'],
+      t4: ['knowledge', '码道：知识库（近似 Repo Wiki）'],
+      t5: ['knowledge', '码道：知识库（近似知识卡片）'],
+      t6: ['codebase', '码道：代码库索引'],
+      t7: ['lsp', '码道：LSP'],
+      t8: ['context', '码道：上下文压缩'],
+      t9: ['agent', '码道：规范开发工作流'],
+      t10: ['commands', '码道：智能体命令（近似 CLI）'],
+      t11: ['agent', '码道：任务规划（近似 Goal）'],
+      t12: ['agent', '码道：规范开发（近似 Quest）'],
+      t13: ['agentspace', '码道：Agent Space（近似 Cloud Agent）'],
+      t14: ['agent', '码道：氛围编程（近似 SOLO）'],
+      t15: ['mcp', '码道：MCP'],
+      t16: ['commands', '码道：Slash Commands'],
+      t17: ['product', '码道：IDE 智能体（近似远程环境）'],
+      t18: ['hooks', '码道：Hooks 自动化（近似）'],
+      t19: ['agent', '码道：Spec-Driven 规范开发'],
+      t20: ['product', '码道：产品功能（未见 Headless）'],
+      t21: ['product', '码道：IDE/插件能力（近似）'],
+      t22: ['agentteam', '码道：AgentTeam'],
+      t23: ['multisession', '码道：多会话（不等同 Worktree）'],
+      t24: ['mcp', '码道：MCP 集成（近似 Channels）'],
+      t25: ['agent', '码道：任务清单与进度'],
+      t26: ['hooks', '码道：Hooks'],
+      t27: ['sandbox', '码道：沙箱与风险拦截'],
+      t28: ['pricing', '码道：版本与定价'],
+      t29: ['pricing', '码道：专业版治理配置'],
+      t30: ['sandbox', '码道：沙箱安全（近似 OpenSec）'],
+      t31: ['sandbox', '码道：权限审批与沙箱'],
+      t32: ['sandbox', '码道：敏感目录隔离（近似 Secrets）'],
+      t33: ['pricing', '码道：专业版安全治理'],
+      t34: ['pricing', '码道：用量与配额'],
+      t35: ['pricing', '码道：专业版操作日志'],
+      t36: ['pricing', '码道：模型管理与自定义模型'],
+      t37: ['context', '码道：上下文压缩与成本优化'],
+      t38: ['agent', '码道：浏览器与网页抓取工具'],
+      t39: ['preview', '码道：页面设计编辑（近似 Figma）'],
+      t40: ['context', '码道：Problems/Terminal 调试上下文'],
+      t41: ['completion', '码道：代码续写'],
+      t42: ['preview', '码道：浏览器与页面预览'],
+      t43: ['multimodal', '码道：多模态输入'],
+      t44: ['agent', '码道：规范开发产物（近似 Artifacts）'],
+      t45: ['diff', '码道：Diff 视图审核'],
+      t46: ['skills', '码道：Skills（近似 Superpowers）'],
+      t47: ['skills', '码道：Skills 能力组合'],
+      t48: ['preview', '码道：可视化编辑（近似画布）'],
+      t49: ['skills', '码道：技能与技能市场'],
+      t50: ['checkpoint', '码道：Checkpoint']
+    };
+
+    Object.entries(codeArtsTopicSources).forEach(([topicId, [docKey, label]]) => {
+      const sourceList = document.querySelector(`#${topicId} .sources`);
+      if (!sourceList) return;
+      const sourceLink = document.createElement('a');
+      sourceLink.className = 'source-codearts';
+      sourceLink.href = codeArtsDocs[docKey];
+      sourceLink.textContent = label;
+      sourceLink.title = '华为云码道官方资料';
+      sourceList.prepend(sourceLink);
+    });
 
     const mediaLightbox = document.createElement('div');
     mediaLightbox.className = 'media-lightbox';
