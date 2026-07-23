@@ -692,6 +692,48 @@
       color: var(--muted);
       font-size: 13px;
     }
+    .relationship-entry {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 4px 18px;
+      align-items: center;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--brand-dark);
+      border-radius: 6px;
+      background: #f7f8fa;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .relationship-entry:hover {
+      border-color: var(--frame-strong);
+      background: #f2f3f5;
+    }
+    .relationship-entry-kicker {
+      color: var(--brand-dark);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .relationship-entry-title {
+      grid-column: 1;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+    .relationship-entry-flow {
+      grid-column: 1;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .relationship-entry-action {
+      grid-column: 2;
+      grid-row: 1 / 4;
+      color: var(--brand-dark);
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
     .teaching {
       display: grid;
       gap: 18px;
@@ -1183,6 +1225,12 @@
       .relationship-map { grid-template-columns: 1fr; }
       .relationship-map .relationship-stage { grid-column: 1; }
       .relationship-rails { grid-template-columns: 1fr; }
+      .relationship-entry { grid-template-columns: 1fr; }
+      .relationship-entry-action {
+        grid-column: 1;
+        grid-row: auto;
+        margin-top: 4px;
+      }
     }
     @media print {
       .capability-pager,
@@ -1228,7 +1276,7 @@
         <li><a href="#product-coverage"><span>Σ</span><span>产品能力覆盖矩阵</span></a></li>
         <li><a href="#plan-pricing"><span>$</span><span>套餐价格与额度</span></a></li>
         <li class="toc-category">上下文与知识资产</li>
-        <li><a href="#context-assets-relations"><span>导</span><span>能力关系总览</span></a></li>
+        <li><a href="#context-assets-relations"><span>0</span><span>能力关系总览</span></a></li>
         <li><a href="#t1"><span>1</span><span>知识图谱</span></a></li>
         <li><a href="#t2"><span>2</span><span>AGENTS.md / 规则文件</span></a></li>
         <li><a href="#t3"><span>3</span><span>记忆</span></a></li>
@@ -1355,7 +1403,7 @@
           <div class="category-card">
             <h3>上下文与知识资产</h3>
             <p>让 Agent 看懂项目、规则、历史经验和代码结构，是所有高质量输出的前提。</p>
-            <div class="capability-links"><a href="#context-assets-relations">关系总览</a><a href="#t1">1 知识图谱</a><a href="#t2">2 规则文件</a><a href="#t3">3 记忆</a><a href="#t4">4 Repo Wiki</a><a href="#t5">5 知识卡片</a><a href="#t6">6 代码库索引</a><a href="#t7">7 LSP</a><a href="#t8">8 上下文压缩</a></div>
+            <div class="capability-links"><a href="#context-assets-relations">0 能力关系总览</a><a href="#t1">1 知识图谱</a><a href="#t2">2 规则文件</a><a href="#t3">3 记忆</a><a href="#t4">4 Repo Wiki</a><a href="#t5">5 知识卡片</a><a href="#t6">6 代码库索引</a><a href="#t7">7 LSP</a><a href="#t8">8 上下文压缩</a></div>
           </div>
           <div class="category-card">
             <h3>任务编排与执行</h3>
@@ -1571,10 +1619,16 @@
             <h2>上下文与知识资产</h2>
             <p>先让 Agent 看懂项目、规则、历史经验和代码结构，是后续生成、审查和调试的基础。</p>
           </div>
+          <a class="relationship-entry" href="#context-assets-relations">
+            <span class="relationship-entry-kicker">第 0 章 · 分类导读</span>
+            <span class="relationship-entry-title">八项能力如何共同组成 Agent 的上下文供应链</span>
+            <span class="relationship-entry-flow">LSP / 代码库索引 → 知识图谱 → Repo Wiki / 知识卡片 → 上下文装配；规则文件与记忆贯穿全程。</span>
+            <span class="relationship-entry-action">查看完整关系图 <span aria-hidden="true">→</span></span>
+          </a>
           <div class="cards">
           <article id="context-assets-relations" class="topic" data-tags="codearts claude qoder codex cursor trae context knowledge relationship lsp codebase index graph repo wiki cards rules memory compaction">
                     <div class="topic-head">
-                      <h2>上下文与知识资产：能力关系总览</h2>
+                      <h2>0. 上下文与知识资产：能力关系总览</h2>
                       <div class="tags"><span class="tag strong">关系章节</span><span class="tag partial">感知 → 组织 → 沉淀 → 装配</span></div>
                     </div>
                     <div class="topic-body">
