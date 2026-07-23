@@ -566,6 +566,86 @@
     .topic-groups.is-paged .cards {
       min-height: 520px;
     }
+    .relationship-map {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr);
+      gap: 6px;
+      align-items: stretch;
+      margin-top: 12px;
+    }
+    .relationship-stage {
+      min-height: 118px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .relationship-stage b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--brand-dark);
+      font-size: 13px;
+    }
+    .relationship-stage span {
+      display: block;
+      color: #3d3335;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .relationship-arrow {
+      display: grid;
+      place-items: center;
+      color: var(--brand-dark);
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .relationship-rails {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .relationship-rail {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--frame-strong);
+      border-radius: 6px;
+      background: #f7f8fa;
+      color: #3d3335;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .relationship-rail b {
+      color: var(--brand-dark);
+    }
+    .relationship-side {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f7f8fa;
+    }
+    .relationship-side h3 {
+      margin: 0 0 8px;
+      color: var(--brand-dark);
+      font-size: 14px;
+    }
+    .relationship-side h3:not(:first-child) {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .relationship-side ol,
+    .relationship-side ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #3d3335;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+    .relationship-side li + li {
+      margin-top: 5px;
+    }
     .pager-empty {
       margin-top: 16px;
       padding: 44px 18px;
@@ -1067,6 +1147,9 @@
       .pager-controls { justify-content: space-between; }
       .pager-jump { flex: 1 1 auto; }
       .pager-select { width: 100%; }
+      .relationship-map { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .relationship-arrow { display: none; }
+      .relationship-rails { grid-column: 1 / -1; }
     }
     @media (max-width: 720px) {
       main { padding: 14px; }
@@ -1097,6 +1180,9 @@
       .pager-footer { grid-template-columns: 1fr 1fr; }
       .pager-footer .pager-count { grid-column: 1 / -1; grid-row: 1; text-align: center; }
       .pager-footer .pager-button { grid-row: 2; }
+      .relationship-map { grid-template-columns: 1fr; }
+      .relationship-map .relationship-stage { grid-column: 1; }
+      .relationship-rails { grid-template-columns: 1fr; }
     }
     @media print {
       .capability-pager,
@@ -1142,6 +1228,7 @@
         <li><a href="#product-coverage"><span>Σ</span><span>产品能力覆盖矩阵</span></a></li>
         <li><a href="#plan-pricing"><span>$</span><span>套餐价格与额度</span></a></li>
         <li class="toc-category">上下文与知识资产</li>
+        <li><a href="#context-assets-relations"><span>导</span><span>能力关系总览</span></a></li>
         <li><a href="#t1"><span>1</span><span>知识图谱</span></a></li>
         <li><a href="#t2"><span>2</span><span>AGENTS.md / 规则文件</span></a></li>
         <li><a href="#t3"><span>3</span><span>记忆</span></a></li>
@@ -1268,7 +1355,7 @@
           <div class="category-card">
             <h3>上下文与知识资产</h3>
             <p>让 Agent 看懂项目、规则、历史经验和代码结构，是所有高质量输出的前提。</p>
-            <div class="capability-links"><a href="#t1">1 知识图谱</a><a href="#t2">2 规则文件</a><a href="#t3">3 记忆</a><a href="#t4">4 Repo Wiki</a><a href="#t5">5 知识卡片</a><a href="#t6">6 代码库索引</a><a href="#t7">7 LSP</a><a href="#t8">8 上下文压缩</a></div>
+            <div class="capability-links"><a href="#context-assets-relations">关系总览</a><a href="#t1">1 知识图谱</a><a href="#t2">2 规则文件</a><a href="#t3">3 记忆</a><a href="#t4">4 Repo Wiki</a><a href="#t5">5 知识卡片</a><a href="#t6">6 代码库索引</a><a href="#t7">7 LSP</a><a href="#t8">8 上下文压缩</a></div>
           </div>
           <div class="category-card">
             <h3>任务编排与执行</h3>
@@ -1459,22 +1546,22 @@
           </table>
         </div>
       </section>
-      <section class="capability-reader" id="capability-reader" aria-label="能力项分页阅读">
-        <nav class="capability-pager" aria-label="能力项翻页">
+      <section class="capability-reader" id="capability-reader" aria-label="能力章节分页阅读">
+        <nav class="capability-pager" aria-label="能力章节翻页">
           <div class="pager-status" aria-live="polite">
-            <span class="pager-label">能力项分页</span>
+            <span class="pager-label">能力章节分页</span>
             <div class="pager-current">
-              <strong id="pager-title">1. 知识图谱</strong>
-              <span class="pager-count" id="pager-count">1 / 50</span>
+              <strong id="pager-title">上下文与知识资产：能力关系总览</strong>
+              <span class="pager-count" id="pager-count">1 / 51</span>
             </div>
           </div>
           <div class="pager-controls">
             <label class="pager-jump" for="pager-select">
               <span>快速跳转</span>
-              <select class="pager-select" id="pager-select" aria-label="选择能力项"></select>
+              <select class="pager-select" id="pager-select" aria-label="选择能力章节"></select>
             </label>
-            <button class="pager-button" id="pager-prev" type="button" aria-label="上一能力项"><span aria-hidden="true">←</span><span>上一页</span></button>
-            <button class="pager-button" id="pager-next" type="button" aria-label="下一能力项"><span>下一页</span><span aria-hidden="true">→</span></button>
+            <button class="pager-button" id="pager-prev" type="button" aria-label="上一章节"><span aria-hidden="true">←</span><span>上一页</span></button>
+            <button class="pager-button" id="pager-next" type="button" aria-label="下一章节"><span>下一页</span><span aria-hidden="true">→</span></button>
           </div>
         </nav>
 
@@ -1485,6 +1572,57 @@
             <p>先让 Agent 看懂项目、规则、历史经验和代码结构，是后续生成、审查和调试的基础。</p>
           </div>
           <div class="cards">
+          <article id="context-assets-relations" class="topic" data-tags="codearts claude qoder codex cursor trae context knowledge relationship lsp codebase index graph repo wiki cards rules memory compaction">
+                    <div class="topic-head">
+                      <h2>上下文与知识资产：能力关系总览</h2>
+                      <div class="tags"><span class="tag strong">关系章节</span><span class="tag partial">感知 → 组织 → 沉淀 → 装配</span></div>
+                    </div>
+                    <div class="topic-body">
+                      <div>
+                        <div class="explain">
+                          <div class="box"><h3>核心结论</h3><p>这八项能力不是平行功能，也不能相互替代。它们共同构成 Agent 的上下文供应链：先读取工程信号，再建立关系、沉淀知识，最后按当前任务装配进模型上下文。</p></div>
+                          <div class="box"><h3>关系主线</h3><p>LSP 与代码库索引负责“看见代码”；知识图谱负责“建立关系”；Repo Wiki 与知识卡片负责“形成可复用资产”；上下文管理与压缩负责“本轮到底带什么”。</p></div>
+                          <div class="box"><h3>两条控制轨道</h3><p>规则文件是必须遵守的硬约束，优先级应高于记忆；记忆是跨会话积累的软偏好与经验。两者都会参与上下文装配，但治理方式不同。</p></div>
+                        </div>
+
+                        <div class="relationship-map" role="img" aria-label="上下文与知识资产从工程感知、关系组织、知识沉淀到运行时装配的数据流，规则和记忆贯穿整个流程">
+                          <div class="relationship-stage"><b>1. 工程感知层</b><span><strong>LSP</strong>提供当前文件的符号、跳转和诊断；<strong>代码库索引</strong>提供跨文件、跨目录的语义检索与仓库级召回。</span></div>
+                          <div class="relationship-arrow" aria-hidden="true">→</div>
+                          <div class="relationship-stage"><b>2. 关系组织层</b><span><strong>知识图谱</strong>把模块、接口、调用链、文档、负责人和约束组织成实体与关系，支持影响分析和多跳理解。</span></div>
+                          <div class="relationship-arrow" aria-hidden="true">→</div>
+                          <div class="relationship-stage"><b>3. 知识资产层</b><span><strong>Repo Wiki</strong>面向人提供连续说明；<strong>知识卡片</strong>面向 Agent 提供粒度更小、可检索、可引用的知识单元。</span></div>
+                          <div class="relationship-arrow" aria-hidden="true">→</div>
+                          <div class="relationship-stage"><b>4. 运行时装配层</b><span><strong>上下文管理与压缩</strong>按任务选择代码、知识、规则和历史，并在窗口受限时摘要、裁剪和保留关键证据。</span></div>
+                          <div class="relationship-rails">
+                            <div class="relationship-rail"><b>规则文件：硬约束控制面。</b>规定构建、测试、架构边界、安全禁区和交付标准，应版本化、可审查，并在冲突时高于个人记忆。</div>
+                            <div class="relationship-rail"><b>记忆：长期反馈回路。</b>保存稳定偏好、项目经验和反复出现的问题，补充下一轮检索与装配；敏感信息和一次性指令不应进入记忆。</div>
+                          </div>
+                        </div>
+
+                        <div class="practice"><strong>团队落地：</strong>先建设 Rules + LSP/代码库索引，确保“能找到、守规则”；再把高频架构知识沉淀为 Wiki/知识卡片；复杂仓库再引入图谱关系；最后通过记忆和上下文压缩优化连续性与 Token 成本。验收应同时看检索命中率、首轮任务通过率、过期知识率和单任务上下文消耗。</div>
+                        <div class="sources"><a class="source-codearts" href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0001.html">码道：代码库索引</a><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsagent_ug_0003.html">码道 LSP</a><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0019.html">码道 Rules</a><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0039.html">码道记忆</a><a href="https://support.huaweicloud.com/usermanual-codeartssnap/codeartsdoer_ug_0009.html">码道上下文压缩</a><a href="https://docs.qoder.com/account/enterprise/knowledge-base">Qoder Knowledge Engine</a></div>
+                      </div>
+                      <div class="relationship-side">
+                        <h3>推荐建设顺序</h3>
+                        <ol>
+                          <li>先写清仓库规则与验收标准。</li>
+                          <li>启用 LSP 和代码库索引，建立基础召回。</li>
+                          <li>把架构、接口和经验沉淀为 Wiki 与知识卡片。</li>
+                          <li>当跨系统关系复杂时，再建设知识图谱。</li>
+                          <li>最后治理记忆、压缩阈值和知识更新机制。</li>
+                        </ol>
+                        <h3>关键边界</h3>
+                        <ul>
+                          <li>LSP 擅长实时语法与符号，不等于仓库知识库。</li>
+                          <li>代码库索引解决检索，不自动形成可信业务知识。</li>
+                          <li>Wiki 与卡片是不同消费视图，可共享同一知识底座。</li>
+                          <li>强制规则不能只保存在记忆中。</li>
+                          <li>压缩会损失细节，关键结论必须保留来源引用。</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+
           <article id="t1" class="topic" data-tags="qoder cursor codex claude trae knowledge graph repo wiki knowledge cards index codearts">
                     <div class="topic-head">
                       <h2>1. 知识图谱</h2>
@@ -2366,11 +2504,11 @@
           </div>
         </section>
         </div>
-        <div class="pager-empty" id="pager-empty" hidden>没有符合当前筛选条件的能力项。</div>
-        <nav class="pager-footer" id="pager-footer" aria-label="能力项底部翻页">
-          <button class="pager-button" id="pager-prev-bottom" type="button" aria-label="上一能力项"><span aria-hidden="true">←</span><span>上一页</span></button>
-          <span class="pager-count" id="pager-count-bottom">1 / 50</span>
-          <button class="pager-button" id="pager-next-bottom" type="button" aria-label="下一能力项"><span>下一页</span><span aria-hidden="true">→</span></button>
+        <div class="pager-empty" id="pager-empty" hidden>没有符合当前筛选条件的能力章节。</div>
+        <nav class="pager-footer" id="pager-footer" aria-label="能力章节底部翻页">
+          <button class="pager-button" id="pager-prev-bottom" type="button" aria-label="上一章节"><span aria-hidden="true">←</span><span>上一页</span></button>
+          <span class="pager-count" id="pager-count-bottom">1 / 51</span>
+          <button class="pager-button" id="pager-next-bottom" type="button" aria-label="下一章节"><span>下一页</span><span aria-hidden="true">→</span></button>
         </nav>
       </section>
 
@@ -2606,7 +2744,9 @@
     const filters = Array.from(document.querySelectorAll('.filter'));
     const cards = Array.from(document.querySelectorAll('.topic'));
     const topicGroups = Array.from(document.querySelectorAll('.topic-group'));
-    const topicNavLinks = Array.from(document.querySelectorAll('.toc a[href^="#t"]'));
+    const cardIds = new Set(cards.map(card => card.id));
+    const topicNavLinks = Array.from(document.querySelectorAll('.toc a[href^="#"]'))
+      .filter(link => cardIds.has(link.getAttribute('href').slice(1)));
     const topicGroupsContainer = document.getElementById('cards');
     const capabilityReader = document.getElementById('capability-reader');
     const pagerTitle = document.getElementById('pager-title');
@@ -2839,7 +2979,7 @@
       pagerTitle.textContent = cardTitle(card);
       pagerCount.textContent = countText;
       pagerCountBottom.textContent = countText;
-      pagerCount.title = `当前筛选结果 ${visibleCards.length} 项，全部能力共 ${cards.length} 项`;
+      pagerCount.title = `当前筛选结果 ${visibleCards.length} 个章节，全部分页章节共 ${cards.length} 个`;
       pagerSelect.value = card.id;
       previousButtons.forEach(button => { button.disabled = pageIndex <= 0; });
       nextButtons.forEach(button => { button.disabled = pageIndex >= visibleCards.length - 1; });
@@ -2893,7 +3033,8 @@
           ? activeCard
           : visibleCards[0];
       const cardChanged = nextCard !== activeCard;
-      const hashMode = syncHash && cardChanged && /^#t\d+$/.test(window.location.hash) ? 'replace' : 'none';
+      const hashTarget = document.getElementById(window.location.hash.slice(1));
+      const hashMode = syncHash && cardChanged && hashTarget?.classList.contains('topic') ? 'replace' : 'none';
       renderCard(nextCard, { hashMode });
     }
 
@@ -2918,7 +3059,7 @@
       if (target) renderCard(target, { hashMode: 'push', scroll: true });
     });
 
-    document.querySelectorAll('a[href^="#t"]').forEach(link => {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', event => {
         const targetId = link.getAttribute('href').slice(1);
         const target = document.getElementById(targetId);
