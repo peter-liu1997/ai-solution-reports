@@ -3,6 +3,7 @@
 面向团队赋能使用的 AI Coding 工具能力分析与培训材料。
 
 - [在线完整文档](https://peter-liu1997.github.io/ai-solution-reports/)
+- [16页华为企业方案风格版 PPT](./AI-Coding-工具能力赋能-16页华为企业方案风格版.pptx)
 - [16页设计规范版 PPT](./AI-Coding-工具能力赋能-16页设计规范版.pptx)
 - [15页精讲版 PPT](./AI-Coding-工具能力赋能-15页精讲版.pptx)
 - [14页精讲版 PPT](./AI-Coding-工具能力赋能-14页精讲版.pptx)
