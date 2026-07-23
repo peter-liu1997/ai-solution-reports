@@ -89,6 +89,51 @@
       flex-wrap: wrap;
       justify-content: flex-end;
     }
+    .reading-mode {
+      display: inline-flex;
+      padding: 2px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f3f4f6;
+    }
+    .mode-button {
+      border: 0;
+      border-radius: 6px;
+      padding: 7px 10px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .mode-button.active {
+      background: #fff;
+      color: var(--brand-dark);
+      box-shadow: 0 1px 3px rgba(31, 38, 46, 0.12);
+      font-weight: 800;
+    }
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 38px;
+      border: 1px solid var(--frame-strong);
+      border-radius: 8px;
+      padding: 8px 11px;
+      background: #fff;
+      color: var(--brand-dark);
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .download-link:hover {
+      background: var(--brand-soft);
+      text-decoration: none;
+    }
+    .download-link-icon {
+      font-size: 17px;
+      line-height: 1;
+    }
     .search {
       width: 270px;
       border: 1px solid var(--line);
@@ -465,6 +510,9 @@
       box-shadow: 0 6px 18px rgba(31, 38, 46, 0.1);
       backdrop-filter: blur(10px);
     }
+    .capability-pager[hidden] {
+      display: none !important;
+    }
     .pager-status {
       min-width: 0;
     }
@@ -562,6 +610,12 @@
     }
     .topic-groups.is-paged .topic.page-active {
       display: block;
+    }
+    .topic-groups.is-continuous {
+      margin-top: 16px;
+    }
+    .topic-groups.is-continuous .topic {
+      scroll-margin-top: 96px;
     }
     .topic-groups.is-paged .cards {
       min-height: 520px;
@@ -971,12 +1025,22 @@
       font-size: 13px;
     }
     .practice strong { color: var(--brand-dark); }
-    .sources {
-      margin-top: 10px;
+    .sources { margin-top: 10px; font-size: 12px; }
+    .source-details {
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+    }
+    .source-details summary {
+      width: fit-content;
+      color: var(--brand-dark);
+      cursor: pointer;
+      font-weight: 750;
+    }
+    .source-links {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      font-size: 12px;
+      padding-top: 8px;
     }
     .sources a {
       border: 1px solid var(--line);
@@ -1255,6 +1319,11 @@
         <p class="subtitle">华为云码道（CodeArts） / Claude Code / Qoder / OpenAI Codex / Cursor / Trae：能力框架、产品差异、套餐认知；官网资料复核日期：2026-07-21</p>
       </div>
       <div class="controls">
+        <div class="reading-mode" role="group" aria-label="阅读模式">
+          <button class="mode-button active" type="button" data-mode="continuous" aria-pressed="true">连续阅读</button>
+          <button class="mode-button" type="button" data-mode="paged" aria-pressed="false">单页翻阅</button>
+        </div>
+        <a class="download-link" href="AI-Coding-工具能力赋能-团队完整版.pptx" download title="下载团队完整版PPT"><span class="download-link-icon" aria-hidden="true">↓</span><span>团队完整版PPT</span></a>
         <input id="search" class="search" type="search" placeholder="搜索主题、工具或关键词" />
         <button class="filter active" data-filter="all">全部</button>
         <button class="filter" data-filter="codearts">码道</button>
@@ -2796,6 +2865,7 @@
   <script>
     const search = document.getElementById('search');
     const filters = Array.from(document.querySelectorAll('.filter'));
+    const readingModeButtons = Array.from(document.querySelectorAll('.mode-button'));
     const cards = Array.from(document.querySelectorAll('.topic'));
     const topicGroups = Array.from(document.querySelectorAll('.topic-group'));
     const cardIds = new Set(cards.map(card => card.id));
@@ -2803,6 +2873,7 @@
       .filter(link => cardIds.has(link.getAttribute('href').slice(1)));
     const topicGroupsContainer = document.getElementById('cards');
     const capabilityReader = document.getElementById('capability-reader');
+    const capabilityPager = document.querySelector('.capability-pager');
     const pagerTitle = document.getElementById('pager-title');
     const pagerCount = document.getElementById('pager-count');
     const pagerCountBottom = document.getElementById('pager-count-bottom');
@@ -2812,6 +2883,7 @@
     const previousButtons = [document.getElementById('pager-prev'), document.getElementById('pager-prev-bottom')];
     const nextButtons = [document.getElementById('pager-next'), document.getElementById('pager-next-bottom')];
     let activeFilter = 'all';
+    let readingMode = 'continuous';
     let visibleCards = [...cards];
     let activeCard = null;
 
@@ -2904,6 +2976,23 @@
       sourceList.prepend(sourceLink);
     });
 
+    document.querySelectorAll('.sources').forEach(sourceList => {
+      const links = Array.from(sourceList.querySelectorAll('a'));
+      links.forEach(link => {
+        link.target = '_blank';
+        link.rel = 'noreferrer';
+      });
+      const details = document.createElement('details');
+      details.className = 'source-details';
+      const summary = document.createElement('summary');
+      summary.textContent = `官网来源（${links.length}）`;
+      const linkList = document.createElement('div');
+      linkList.className = 'source-links';
+      links.forEach(link => linkList.appendChild(link));
+      details.append(summary, linkList);
+      sourceList.replaceChildren(details);
+    });
+
     const mediaLightbox = document.createElement('div');
     mediaLightbox.className = 'media-lightbox';
     mediaLightbox.innerHTML = `
@@ -2992,8 +3081,6 @@
       option.textContent = cardTitle(card);
       pagerSelect.appendChild(option);
     });
-    topicGroupsContainer.classList.add('is-paged');
-
     function updateHash(card, mode) {
       if (!card || mode === 'none') return;
       const nextHash = `#${card.id}`;
@@ -3008,6 +3095,12 @@
     function scrollToReader() {
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       capabilityReader.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    }
+
+    function scrollToTopic(card) {
+      if (!card) return;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      card.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
     }
 
     function renderCard(card, { hashMode = 'none', scroll = false } = {}) {
@@ -3039,6 +3132,7 @@
       nextButtons.forEach(button => { button.disabled = pageIndex >= visibleCards.length - 1; });
       pagerEmpty.hidden = true;
       pagerFooter.hidden = false;
+      capabilityPager.hidden = false;
       topicGroupsContainer.classList.remove('no-results');
       updateHash(card, hashMode);
       if (scroll) scrollToReader();
@@ -3046,14 +3140,21 @@
 
     function showEmptyState() {
       activeCard = null;
-      cards.forEach(card => card.classList.remove('page-active'));
-      topicGroups.forEach(group => group.classList.remove('page-group-active'));
+      cards.forEach(card => {
+        card.hidden = true;
+        card.classList.remove('page-active');
+      });
+      topicGroups.forEach(group => {
+        group.hidden = true;
+        group.classList.remove('page-group-active');
+      });
       pagerTitle.textContent = '无匹配能力项';
       pagerCount.textContent = '0 / 0';
       pagerCountBottom.textContent = '0 / 0';
       previousButtons.forEach(button => { button.disabled = true; });
       nextButtons.forEach(button => { button.disabled = true; });
       pagerSelect.value = '';
+      capabilityPager.hidden = readingMode === 'continuous';
       pagerEmpty.hidden = false;
       pagerFooter.hidden = true;
       topicGroupsContainer.classList.add('no-results');
@@ -3081,6 +3182,40 @@
         return;
       }
 
+      if (readingMode === 'continuous') {
+        const nextCard = visibleCards.includes(preferredCard)
+          ? preferredCard
+          : visibleCards.includes(activeCard)
+            ? activeCard
+            : visibleCards[0];
+        activeCard = nextCard;
+        const visibleIds = new Set(visibleCards.map(card => card.id));
+        cards.forEach(card => {
+          card.hidden = !visibleIds.has(card.id);
+          card.classList.remove('page-active');
+          card.removeAttribute('aria-current');
+        });
+        topicGroups.forEach(group => {
+          const groupVisible = visibleCards.some(card => card.closest('.topic-group') === group);
+          group.hidden = !groupVisible;
+          group.classList.remove('page-group-active');
+        });
+        topicNavLinks.forEach(link => {
+          const isCurrent = link.getAttribute('href') === `#${nextCard.id}`;
+          link.classList.toggle('current-topic', isCurrent);
+          if (isCurrent) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+        capabilityPager.hidden = true;
+        pagerEmpty.hidden = true;
+        pagerFooter.hidden = true;
+        topicGroupsContainer.classList.remove('no-results');
+        return;
+      }
+
+      cards.forEach(card => { card.hidden = false; });
+      topicGroups.forEach(group => { group.hidden = false; });
+
       const nextCard = visibleCards.includes(preferredCard)
         ? preferredCard
         : visibleCards.includes(activeCard)
@@ -3090,6 +3225,23 @@
       const hashTarget = document.getElementById(window.location.hash.slice(1));
       const hashMode = syncHash && cardChanged && hashTarget?.classList.contains('topic') ? 'replace' : 'none';
       renderCard(nextCard, { hashMode });
+    }
+
+    function setReadingMode(mode, { preferredCard = null, scroll = false } = {}) {
+      readingMode = mode === 'paged' ? 'paged' : 'continuous';
+      const isPaged = readingMode === 'paged';
+      topicGroupsContainer.classList.toggle('is-paged', isPaged);
+      topicGroupsContainer.classList.toggle('is-continuous', !isPaged);
+      readingModeButtons.forEach(button => {
+        const isActive = button.dataset.mode === readingMode;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+      applyFilters(preferredCard, { syncHash: false });
+      if (scroll) {
+        if (isPaged) scrollToReader();
+        else scrollToTopic(preferredCard || activeCard);
+      }
     }
 
     function resetFilters() {
@@ -3117,13 +3269,19 @@
       link.addEventListener('click', event => {
         const targetId = link.getAttribute('href').slice(1);
         const target = document.getElementById(targetId);
-        if (!target?.classList.contains('topic')) return;
-        event.preventDefault();
-        if (!visibleCards.includes(target)) {
-          resetFilters();
-          applyFilters(target, { syncHash: false });
+      if (!target?.classList.contains('topic')) return;
+      event.preventDefault();
+      if (!visibleCards.includes(target)) {
+        resetFilters();
+        applyFilters(target, { syncHash: false });
+      }
+        if (readingMode === 'continuous') {
+          activeCard = target;
+          updateHash(target, 'push');
+          scrollToTopic(target);
+        } else {
+          renderCard(target, { hashMode: 'push', scroll: true });
         }
-        renderCard(target, { hashMode: 'push', scroll: true });
       });
     });
 
@@ -3139,11 +3297,16 @@
         resetFilters();
         applyFilters(target, { syncHash: false });
       }
-      renderCard(target, { scroll: true });
+      if (readingMode === 'continuous') {
+        activeCard = target;
+        scrollToTopic(target);
+      } else {
+        renderCard(target, { scroll: true });
+      }
     });
 
     document.addEventListener('keydown', event => {
-      if (mediaLightbox.classList.contains('open') || event.metaKey || event.ctrlKey || event.altKey) return;
+      if (readingMode !== 'paged' || mediaLightbox.classList.contains('open') || event.metaKey || event.ctrlKey || event.altKey) return;
       if (event.target.matches('input, select, textarea, button, a')) return;
       if (event.key === 'ArrowLeft') {
         event.preventDefault();
@@ -3165,10 +3328,19 @@
     });
     search.addEventListener('input', applyFilters);
 
+    readingModeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const hashTarget = document.getElementById(window.location.hash.slice(1));
+        const preferredCard = hashTarget?.classList.contains('topic') ? hashTarget : activeCard;
+        setReadingMode(button.dataset.mode, { preferredCard, scroll: true });
+      });
+    });
+
     const initialCard = document.getElementById(window.location.hash.slice(1));
-    applyFilters(initialCard?.classList.contains('topic') ? initialCard : cards[0], { syncHash: false });
+    const preferredInitialCard = initialCard?.classList.contains('topic') ? initialCard : cards[0];
+    setReadingMode('continuous', { preferredCard: preferredInitialCard });
     if (initialCard?.classList.contains('topic')) {
-      window.requestAnimationFrame(scrollToReader);
+      window.requestAnimationFrame(() => scrollToTopic(initialCard));
     }
   </script>
 </body>
